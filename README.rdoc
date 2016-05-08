@@ -3,26 +3,39 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+Things you may need to know:
 
-* Ruby version
+* Ruby 2.2.4p230 (2015-12-16 revision 53155) [i386-mingw32]
 
-* System dependencies
+* Rails 4.2.6
 
-* Configuration
+Things that have to be done:
 
-* Database creation
+*Course Template
+  -Creating courses (Titel, Descripton, Picture, Place, Time, What you have to bring to applicate)
+  -Creater has to be clear (Showing creator)
 
-* Database initialization
+*Calendar
+  -Google-Calendar (<iframe src="https://calendar.google.com/calendar/embed?src=79dpoauir9fa3sd7elj16j40rs%40group.calendar.google.com&ctz=Europe/Berlin" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>)
 
-* How to run the test suite
+*Login and User Management System
+  -Login
+  -Application to courses
 
-* Services (job queues, cache servers, search engines, etc.)
+*Navigation
+  -Idee
+  -Kursangebot
+  -Veranstaltungsangebot
+  -Anmeldung
+  -Lagepläne
+  -Kontakt
+  -Impressum
 
-* Deployment instructions
+*Automatic Calendar View
 
-* ...
+*Picture Galery
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+*Design
+  -Responsive for Mobile Devices
+  -German and English
+  -http://www.zu-ca.org/ and http://www.faradai.com/ as examples
