@@ -2,13 +2,27 @@
 <html>
 <head>
   <title>LearningNetwork</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<!--Hier muss eine schöne Nav-Bar her (siehe Readme Vorlage)-->
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>Über uns</li>
+      <li>Kontakt</li>
+    </ul>
+  </nav>
+<!--Hier muss ein schöner Footer her mit Link zum Impressum-->
+  <footer>
+    Impressum
+  </footer>
+  <%= yield %>
+<!--Hier muss ein schöner OnePager her ähnlich der Vorlage-->
+
 
 </body>
 </html>
