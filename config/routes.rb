@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :courses
   get 'static_pages/Impressum'
 
   get 'static_pages/Angemeldet'
