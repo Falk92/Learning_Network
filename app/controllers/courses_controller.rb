@@ -7,6 +7,15 @@ class CoursesController < ApplicationController
     @courses = Course.all
   end
 
+  def index
+    if params[:q]
+      search_term = params[:q]
+      @courses = Course.where("name LIKE ?", "%#{search_term}%")
+    else
+      @courses = Course.all
+    end
+  end
+
   # GET /courses/1
   # GET /courses/1.json
   def show
@@ -71,4 +80,6 @@ class CoursesController < ApplicationController
     def course_params
       params.require(:course).permit(:title, :time, :place, :description, :image_url)
     end
+
+
 end
