@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :users
   post 'static_pages/thank_you'
 
   resources :courses
