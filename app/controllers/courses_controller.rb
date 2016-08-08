@@ -20,6 +20,7 @@ class CoursesController < ApplicationController
   # GET /courses/1
   # GET /courses/1.json
   def show
+    @comments = @course.comments.order("created_at DESC")
   end
 
   # GET /courses/new

@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   resources :users
   post 'static_pages/thank_you'
 
-  resources :courses
+  resources :courses do
+    resources :comments
+  end
+  
   get 'static_pages/Impressum'
 
   get 'static_pages/Angemeldet'
@@ -65,4 +68,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   resources :orders, only: [:index, :show, :create, :destroy]
+
 end
