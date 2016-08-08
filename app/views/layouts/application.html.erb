@@ -9,8 +9,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<% if notice %>
+    <p id="notice" class="alert alert-info"><%= notice %></p>
+<% end %>
+<% if alert %>
+    <p id="alert" class="alert alert-info"><%= alert %></p>
+<% end %>
 <!--Bootstrap css und js schon integriert-->
 <!--Hier muss eine schöne Nav-Bar her (siehe Readme Vorlage)-->
   <nav>
