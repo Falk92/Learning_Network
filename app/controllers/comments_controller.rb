@@ -18,6 +18,10 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @comment = Comment.find(params[:id])
+    course = @comment.course
+    @comment.destroy
+    redirect_to course
   end
   
 private
