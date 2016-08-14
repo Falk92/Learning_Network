@@ -11,7 +11,112 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="mdl-grid custom-card-grid edit-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp card-title">
+        <div class="upload-field">
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light" disabled>
+            Upload Image
+          </button>
+        </div>
+        <div class="card-title-section">
+          <div>
+            <div>
+              <div class="mdl-textfield mdl-js-textfield">
+                <%= f.text_field :title, :class => "mdl-textfield__input", :id => "sample1" %>
+                <%= f.label :title, :class => "mdl-textfield__label", :for => "sample1" %>
+              </div>
+            </div>
+          </div>
+          <h2>Author Name</h2>
+          <div class="title-section--buttons">
+            <%= f.submit "Accept", :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light" %>
+            <%= link_to 'Cancel', courses_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-warning" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--4-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp card-info--edit">
+        <div class="mdl-card__title custom-card__title">
+          <h2 class="mdl-card__title-text custom-card__title-text">Date</h2>
+        </div>
+        <div class="mdl-card__supporting-text custom-card__supporting-text">
+          choose date and time for your event
+        </div>
+        <div class="time-label">
+          <%= f.label :time %>
+        </div>
+        <div class="text-form time-form">
+          <%= f.text_field :time, :class => "", :id => "time", :placeholder => "Mon, Dec 24" %>
+        </div>
+        <div class="event-time">
+          <div class="event-time--start event-time--value">
+            <label for="time-start">from</label>
+            <input type="text" placeholder="00:00" id="time-start">
+          </div>
+          <div class="event-time--end event-time--value">
+            <p>
+              <label for="time-end">to</label>
+              <input type="text" placeholder="00:00" id="time-end">
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--6-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp card-info--edit card-devided">
+        <div class="text-section__frame">
+          <div class="mdl-card__title custom-card__title">
+            <h2 class="mdl-card__title-text custom-card__title-text">Location</h2>
+          </div>
+          <div class="mdl-card__supporting-text custom-card__supporting-text">
+            choose the venue for your event
+          </div>
+          <div class="text-form">
+            <div class="mdl-textfield mdl-js-textfield">
+              <%= f.text_field :place, :class => "mdl-textfield__input", :id => "place" %>
+              <%= f.label :place, :class => "mdl-textfield__label", :for => "place" %>
+            </div>
+          </div>
+        </div>
+        <div class="background-icon__frame mdl-cell--hide-phone">
+          <div class="background-icon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--11-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp card-info--edit">
+        <div class="mdl-card__title custom-card__title">
+          <h2 class="mdl-card__title-text custom-card__title-text">Description</h2>
+        </div>
+        <div class="mdl-card__supporting-text custom-card__supporting-text">
+          add some information about your event
+        </div>
+        <div>
+          <div class="text-form text-form__description">
+            <div class="mdl-textfield mdl-js-textfield">
+              <%= f.label :description, :class => "mdl-textfield__label", :for => "course_description" %>
+              <%= f.text_area :description, :class => "mdl-textfield__input", :id => "course_description" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mdl-cell mdl-cell--8-col">
+      <div class="demo-card-wide mdl-card mdl-shadow--2dp card-info--edit">
+        <div class="mdl-card__title custom-card__title">
+          <h2 class="mdl-card__title-text custom-card__title-text">Materials needed</h2>
+        </div>
+        <div class="mdl-card__supporting-text custom-card__supporting-text">
+          if there are any additional ressources needed your participants should bring with them just add it here
+        </div>
+      </div>
+    </div>
+  </div> <!-- grid end -->
+
+
+<!--   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
@@ -34,4 +139,73 @@
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
+<% end %> -->
+
+<script>
+  $('#time').pickadate({
+    container: '.page-content',
+    //formatSubmit: 'dd/mm/yyyy',
+    format: 'ddd, mmm dd',
+    selectMonths: true,
+    selectYears: true,
+    firstDay: 1,
+    klass: {
+       // add the material design to pickadate.js
+    }
+  });
+
+  
+  $('#time-start').timepicker({
+    'appendTo': '.page-content',
+    'forceRoundTime': true,
+    'scrollDefault': 'now',
+    'noneOption': {label:"tba", value:"tba"},
+    'timeFormat': 'H:i',
+    'step': '15',
+    'minTime': '06:00',
+    'maxTime': '00:00',
+    'stopScrollPropagation': true,
+  });
+
+  var start_time = '06:00';
+
+  $('#time-start').on('changeTime', function() {
+    var tba = $('#time-start').val();
+    if (tba == 'tba') {
+      $('#time-end').val('tba');
+    } else {
+      var start = $('#time-start').val();
+      var start_array = start.split(':');
+      var start_h = start_array[0];
+      var start_h = parseInt(start_h);
+      var start_m = start_array[1];
+      var start_m = parseInt(start_m);
+      var m = (parseInt((start_m + 7.5)/15) * 15) % 60;
+      if (m < start_m) {
+        var m = m+15
+      }
+      var m = m.toString();
+      if (m == '0') {
+        var m = '00';
+      }
+      var h = start_m > 52 ? (start_h === 23 ? 0 : ++start_h) : start_h;
+      var h = h.toString();
+      var start_time = h.concat(':',m); 
+      $('#time-end').timepicker('option', { 'minTime': start_time, 'durationTime': start });
+    }
+  });
+
+  $('#time-end').timepicker({
+    'appendTo': '.page-content',
+    'forceRoundTime': true,
+    'noneOption': {label:"tba", value:"tba"},
+    'timeFormat': 'H:i',
+    'step': '15',
+    'minTime': start_time,
+    'maxTime': '00:00',
+    'stopScrollPropagation': true,
+    'showDuration': true,
+    'durationTime': start_time,
+  });
+
+</script>

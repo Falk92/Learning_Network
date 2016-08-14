@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<header class="intro">
+  <h1>Learing Network <br>Courses</h1>
+  <div>
+    <%= link_to '+ Add Course', new_course_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+  </div>
+</header>
+
 <!-- Search Field -->
 <%= form_tag("/courses", method: "get") do %>
   <%= label_tag(:q, "Search for:") %>
@@ -8,7 +15,63 @@
 <% end %>
 
 <!-- Index -->
-<h1>Listing Courses</h1>
+<section class="course-listing">
+  <div class="course_listing--frame mdl-grid">
+    <% @courses.each.with_index do |course, index| %>
+        <div class="listing__cell mdl-cell mdl-cell--4-col">
+          <div class="mdl-card mdl-shadow--2dp listing--course_card">
+              <div class="mdl-card__title custom-card__title">
+                <h2 class="mdl-card__title-text custom-card__title-text listing__custom-title"><%= course.title %></h2>
+              </div>
+                <h2 class="mdl-card__supporting-text custom-card__supporting-text">by author</h2>
+              
+              <div class="listing__card-box listing__card-box--date">
+                <span><%= course.time %></span><span> | </span>
+                <span><%= course.place %></span>
+              </div>
+              
+            <div class="listing--card_picture">
+              <%= course.image_url %>
+            </div>
+          
+
+
+            <div class="listing__card-box card-box--description">
+              <div class="card-box__description">
+                <h1><%= course.title %></h1>
+                <%= truncate(course.description,  length: 300, omission: '...')  %>
+              </div>
+            </div>
+            <div class="listing__card-box card-box--buttons mdl-card__actions">
+              <div class="">
+                <%= link_to 'Read More', course, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+                <button id="creator-menu_<%= index %>" class="mdl-button mdl-js-button mdl-button--icon">
+                   <i class="material-icons">more_vert</i>
+                </button>
+                <ul for="creator-menu_<%= index %>" class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--top-right">
+                  <li class="mdl-menu__item creator-menu__item"><%= link_to 'Edit', edit_course_path(course) %></li>
+                  <li class="mdl-menu__item creator-menu__item creator-menu--warning"><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?'} %></li>
+                </ul>
+              </div>
+            </div>
+
+          
+
+
+          </div>
+          
+        </div>
+
+        
+        
+        
+        
+        
+    <% end %>
+  </div>
+</section>
+
+<!--<h1>Listing Courses</h1>
 
 <table>
   <thead>
@@ -40,4 +103,4 @@
 
 <br>
 
-<%= link_to 'New Course', new_course_path %>
+<%= link_to 'New Course', new_course_path %>-->
