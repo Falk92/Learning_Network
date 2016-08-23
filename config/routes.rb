@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :comments
   end
   
+  get 'static_pages/about'
+
   get 'static_pages/Impressum'
 
   get 'static_pages/Angemeldet'
