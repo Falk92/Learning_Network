@@ -3,6 +3,10 @@ Rails.application.routes.draw do
   resources :users
   post 'static_pages/thank_you'
 
+  get '/my_courses' => 'cart#index'
+  get '/cart/clear' => 'cart#clearCart'
+  get '/cart/:id' => 'cart#add'
+
   resources :courses do
     resources :comments
   end
