@@ -25,5 +25,9 @@
   <%= @course.image_url %>
 </p>
 
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
+<a href="/cart/<%= @course.id %>"> Add to my Courses </a>
+
+<% if current_user.try(:admin?) %>
+  <%= link_to 'Edit', edit_course_path(@course) %> |
+  <%= link_to 'Back', courses_path %>
+<% end %>
