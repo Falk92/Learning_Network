@@ -23,58 +23,55 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="static_pages/contact">Contact</a>
+        <%= link_to "Contact", static_pages_contact_path, :class => "mdl-navigation__link"  %>
         <!-- <a class="mdl-navigation__link" href="">Events</a> -->
         <%= link_to "Courses", courses_path, :class => "mdl-navigation__link"  %>
-        <a class="mdl-navigation__link" href="">About</a>
+        <%= link_to "About", static_pages_about_path, :class => "mdl-navigation__link"  %>
       </nav>
       <nav class="mdl-navigation">
-        <a href="http://bastiankroggel.com">
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">LOGIN</button>
-        </a>
+        <% if user_signed_in? %>
+          <%= button_to "LOGOUT", destroy_user_session_path, :method => :delete, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+        <% else %>
+          <%= button_to "LOGIN", new_user_session_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+        <% end %>
       </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title"><%= link_to "Learning Network Partners", root_path, :class => "mdl-layout-title drawer-title" %></span>
+    <span class="mdl-layout-title"><%= link_to "Learning Network", root_path, :class => "mdl-layout-title drawer-title" %></span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="https://www.zu.de/studium-weiterbildung/das-studium/projekte/amnesty.php" target="_blank">Amnesty International Hochschulgruppe</a>
-      <a class="mdl-navigation__link" href="http://www.international-politics.org/" target="_blank">Club of International Politics – CIP</a>
-      <a class="mdl-navigation__link" href="http://www.codecats.io/" target="_blank">CodeCats</a>
-      <a class="mdl-navigation__link" href="http://www.immigreat.de/" target="_blank">ImmiGreat</a>
-      <a class="mdl-navigation__link" href="http://www.learning-community.net/" target="_blank">Learning Community</a>
-      <a class="mdl-navigation__link" href="http://www.go-green-fn.de/" target="_blank">Rework</a>
-      <a class="mdl-navigation__link" href="http://www.rockyourlife.de/standort/friedrichshafen" target="_blank">Rock Your Life!</a>
-      <a class="mdl-navigation__link" href="http://www.weltraum.org/" target="_blank">Welt_raum</a>
+      <%= link_to "Contact", static_pages_contact_path, :class => "mdl-navigation__link"  %>
+        <!-- <a class="mdl-navigation__link" href="">Events</a> -->
+      <%= link_to "Courses", courses_path, :class => "mdl-navigation__link"  %>
+      <%= link_to "About", static_pages_about_path, :class => "mdl-navigation__link"  %>
       <%= link_to "Privacy & Terms", static_pages_Impressum_path, :class => "mdl-navigation__link" %>
     </nav>
   </div>
   <main class="mdl-layout__content">
     <div class="page-content"><!-- Your content goes here -->
       <%= yield %>
-    
-
+      
       <!-- footer -->
       <section class="social-media">
         <ul>
           <li>
-            <a href="">
+            <a href="https://www.facebook.com/ZeppelinUni/" target="_blank">
               <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
                 Facebook
               </button>
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="https://twitter.com/zeppelin" target="_blank">
               <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
                 Twitter
               </button>
             </a>
           </li>
           <li>
-            <a href="">
+            <a href="https://github.com/Falk92" target="_blank">
               <button class="mdl-button mdl-js-button mdl-js-ripple-effect">
-                Instagram
+                GitHub
               </button>
             </a>
           </li>
@@ -89,8 +86,8 @@
             <ul class="mdl-mega-footer__link-list">
               <li><a href="#">About</a></li>
               <li><a href="#">Terms</a></li>
-              <li><a href="#">Partners</a></li>
-              <li><a href="#">Updates</a></li>
+              <li><a href="static_pages/partners">Partners</a></li>
+              <li><a href="static_pages/updates">Updates</a></li>
             </ul>
           </div>
 
@@ -108,10 +105,10 @@
             <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
             <h1 class="mdl-mega-footer__heading">Technology</h1>
             <ul class="mdl-mega-footer__link-list">
-              <li><a href="#">How it works</a></li>
-              <li><a href="#">Patterns</a></li>
+              <li><a href="static_pages/how_it_works">How it works</a></li>
+              <!-- <li><a href="#">Patterns</a></li> -->
               <li><a href="#">Usage</a></li>
-              <li><a href="#">Products</a></li>
+              <!-- <li><a href="#">Products</a></li> -->
               <li><a href="#">Contracts</a></li>
             </ul>
           </div>
@@ -120,9 +117,9 @@
             <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
             <h1 class="mdl-mega-footer__heading">FAQ</h1>
             <ul class="mdl-mega-footer__link-list">
-              <li><a href="#">Questions</a></li>
-              <li><a href="#">Answers</a></li>
-              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Questions & Answers</a></li>
+              <!-- <li><a href="#">Answers</a></li> -->
+              <li><a href="static_pages/contact">Contact us</a></li>
             </ul>
           </div>
 
