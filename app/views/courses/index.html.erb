@@ -3,7 +3,9 @@
 <header class="intro">
   <h1>Learing Network <br>Courses</h1>
   <div>
-    <%= link_to '+ Add Course', new_course_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+    <% if current_user.try(:admin?) %>
+      <%= link_to '+ Add Course', new_course_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+    <% end %>
   </div>
 </header>
 
