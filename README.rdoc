@@ -1,4 +1,5 @@
-=Things you may need to know:
+=Zeppelin University Learning Network
+This is the official application for the Learning Network, an initiative of the Zeppelin University.
 
 ==Ruby on Rails Version
 
