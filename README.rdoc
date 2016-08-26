@@ -1,41 +1,32 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
 Things you may need to know:
 
 * Ruby 2.2.4p230 (2015-12-16 revision 53155) [i386-mingw32]
 
 * Rails 4.2.6
 
-Things that have to be done:
+Gems:
+source 'https://rubygems.org'
 
-*Course Template
-  -Creating courses (Titel, Descripton, Picture, Place, Time, What you have to bring to applicate)
-  -Creater has to be clear (Showing creator)
+*   'rails', '4.2.6'
+*   'sass-rails', '~> 5.0'
+*   'uglifier', '>= 1.3.0'
+*   'coffee-rails', '~> 4.1.0'
+*   'jquery-rails'
+*   'turbolinks'
+*   'jbuilder', '~> 2.0'
+*   'sdoc', '~> 0.4.0'
+*   'byebug'
+*   'sqlite3'
+*   'web-console', '~> 2.0'
+*   'rails_12factor'
+*   'pg'
+*   'tzinfo-data'
+*   'cancancan'
+*   'devise'
 
-*Calendar
-  -Google-Calendar (<iframe src="https://calendar.google.com/calendar/embed?src=79dpoauir9fa3sd7elj16j40rs%40group.calendar.google.com&ctz=Europe/Berlin" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>)
+To-Do List:
 
-*Login and User Management System
-  -Login
-  -Application to courses
-
-*Navigation
-  -Idee
-  -Kursangebot
-  -Veranstaltungsangebot
-  -Anmeldung
-  -Lagepläne
-  -Kontakt
-  -Impressum
-
-*Automatic Calendar View
-
-*Picture Galery
-
-*Design
-  -Responsive for Mobile Devices
-  -German and English
-  -http://www.zu-ca.org/ and http://www.faradai.com/ as examples
+*   Create 'From', 'To', 'Material', 'Author Name'
+*   Views for ...
+*   Show Admin who is in which course
+*   Test Mailer
