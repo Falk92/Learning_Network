@@ -1,4 +1,6 @@
-==Things you may need to know:
+=Things you may need to know:
+
+==Ruby on Rails Version
 
 * Ruby 2.2.4p230 (2015-12-16 revision 53155) [i386-mingw32]
 
