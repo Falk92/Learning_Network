@@ -33,3 +33,4 @@ This is the official application for the Learning Network, an initiative of the 
 *   Views for ...
 *   Show Admin who is in which course
 *   Test Mailer
+*   Check Search Function
