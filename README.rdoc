@@ -1,11 +1,11 @@
-Things you may need to know:
+==Things you may need to know:
 
 * Ruby 2.2.4p230 (2015-12-16 revision 53155) [i386-mingw32]
 
 * Rails 4.2.6
 
-Gems:
-source 'https://rubygems.org'
+==Gems:
+===_source 'https://rubygems.org'_
 
 *   'rails', '4.2.6'
 *   'sass-rails', '~> 5.0'
@@ -24,7 +24,7 @@ source 'https://rubygems.org'
 *   'cancancan'
 *   'devise'
 
-To-Do List:
+==To-Do List:
 
 *   Create 'From', 'To', 'Material', 'Author Name'
 *   Views for ...
