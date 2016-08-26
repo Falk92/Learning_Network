@@ -30,7 +30,12 @@ This is the official application for the Learning Network, an initiative of the 
 ==To-Do List:
 
 *   Create 'From', 'To', 'Material', 'Author Name'
-*   Views for ...
+*   Views for ..
+	*	User Management (/views/devise) & Funktionen für User Management
+	*	Courses Show (/views/courses/show.html.erb)
+	*	Courses New (/views/courses/_form.html.erb) - Bugs fixen
+	*	Contact (/views/static_pages/contact.html.erb)
+	*	Notifikationen für z.B. "Signe in successfully." neu platzieren
 *   Show Admin who is in which course
 *   Test Mailer
 *   Check Search Function
