@@ -33,12 +33,13 @@ This is the official application for the Learning Network, an initiative of the 
 	*	User Management (/views/devise) & Funktionen für User Management<br>
 		- User anschauen<br>
 		- User editieren<br>
-		- Ggf. Avatar upload<br>
 		- Link zu "My courses"<br>
 	*	Courses Show (/views/courses/show.html.erb)<br>
 	*	Courses New (/views/courses/_form.html.erb) - Bugs fixen<br>
 	*	Contact (/views/static_pages/contact.html.erb)<br>
 	*	Notifikationen für z.B. "Sign in successfully." neu platzieren<br>
+  * Suchfunktion stylen
+  * Entsprechende Felder für die Kurserstellung erstellen
 *   Show Admin who is in which course
 *   Test Mailer
 *   Add Image Upload (Half done)
