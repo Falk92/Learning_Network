@@ -2,30 +2,33 @@
   <h1>Sign Up</h1>
 </header>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<div class="devise--frame">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+    <div class="mdl-textfield mdl-js-textfield devise__textfield">
+      <%= f.email_field :email, :class => "mdl-textfield__input", :id => "email_login",  autofocus: true %>
+      <%= f.label :email, :class => "mdl-textfield__label", :for => "email_login" %>
+    </div>
 
-  <div class="field">
-    <%= f.label :password %>
+    <div class="mdl-textfield mdl-js-textfield devise__textfield">
+      <%= f.password_field :password, :class => "mdl-textfield__input", :id => "password_login",  autocomplete: "off" %>
+      <%= f.label :password, :class => "mdl-textfield__label", :for => "password_login" %>
+    </div>
+
+    <div class="mdl-textfield mdl-js-textfield devise__textfield">
+      <%= f.password_field :password_confirmation, :class => "mdl-textfield__input", :id => "password_confirmation",  autocomplete: "off" %>
+      <%= f.label :password_confirmation, :class => "mdl-textfield__label", :for => "password_confirmation" %>
+    </div>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+      <p>
+        For security reasons the Sign Up process requires a passwort with at least 
+        <%= @minimum_password_length %> characters
+      </p>
+    <% end %>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+    <%= f.submit "Sign up", :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light login__button" %>
+  <% end %>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
+</div>
