@@ -97,9 +97,7 @@ a.mdl-button.mdl-button--raised.button-warning {
 }
 
 .mdl-layout__drawer .mdl-layout-title {
-  @media(min-width: 1025px) {
-    font-size: 12px;
-  }
+  font-size: 12px;
 }
 
 .drawer-title {
@@ -652,4 +650,47 @@ header.intro {
 
 .creator-menu--warning a {
   color: $accent-color__warning;
+}
+
+.devise--frame {
+  width: 90%;
+  margin: 100px auto; 
+  max-width: 400px;
+  text-align: center;
+  .devise__textfield {
+    display: block;
+    margin: 0 auto;
+  }
+  .devise__remember {
+    margin: 0 auto;
+    width: 150px;
+  }
+  .login__button {
+    margin: 50px 0;
+  }
+  .sign-up_button,
+  .sign-up_button:hover {
+    color: #666;
+  }
+  .sign-up_button {
+    background: rgba(0,0,0, 0.05);
+  }
+  .sign-up_button:hover {
+    background: rgba(0,0,0, 0.1)
+  }
+  .sign-up__frame {
+    display: block;
+    margin: 10px 0;
+  }
+  a.forgot_password {
+    text-transform: uppercase;
+    font-size: 14px;
+    text-decoration: none;
+    color: #666;
+    &:hover {
+      background: none;
+      text-decoration: none;
+      color: #666;
+    }
+  }
 }

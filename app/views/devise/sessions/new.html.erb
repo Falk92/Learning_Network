@@ -2,27 +2,27 @@
   <h1>Log In</h1>
 </header>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+<div class="devise--frame">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    
+    <div class="mdl-textfield mdl-js-textfield devise__textfield">
+      <%= f.email_field :email, :class => "mdl-textfield__input", :id => "email_login",  autofocus: true %>
+      <%= f.label :email, :class => "mdl-textfield__label", :for => "email_login" %>
     </div>
-  <% end -%>
+    <div class="mdl-textfield mdl-js-textfield devise__textfield">
+      <%= f.password_field :password, :class => "mdl-textfield__input", :id => "password_login",  autocomplete: "off" %>
+      <%= f.label :password, :class => "mdl-textfield__label", :for => "password_login" %>
+    </div>
+    <% if devise_mapping.rememberable? -%>
+      <div class="devise__remember">
+        <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-rememberme">
+          <%= f.check_box :remember_me, :id => "checkbox-rememberme", :class => "mdl-checkbox__input" %>
+          <span class="mdl-checkbox__label">Remember me</span>
+        </label>
+      </div>
+    <% end -%>
+      <%= f.submit "Log in", :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light login__button" %>
+  <% end %>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
+</div>
