@@ -96,6 +96,12 @@ a.mdl-button.mdl-button--raised.button-warning {
   }
 }
 
+.mdl-layout__drawer .mdl-layout-title {
+  @media(min-width: 1025px) {
+    font-size: 12px;
+  }
+}
+
 .drawer-title {
   display: inline-block;
 }
