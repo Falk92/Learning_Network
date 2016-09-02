@@ -17,12 +17,12 @@ ActiveRecord::Schema.define(version: 20160831224959) do
     t.integer  "user_id"
     t.text     "body"
     t.integer  "rating"
-    t.integer  "product_id"
+    t.integer  "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "comments", ["product_id"], name: "index_comments_on_product_id"
+  add_index "comments", ["course_id"], name: "index_comments_on_course_id"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
   create_table "courses", force: :cascade do |t|
@@ -41,11 +41,11 @@ ActiveRecord::Schema.define(version: 20160831224959) do
 
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "product_id"
+    t.integer "course_id"
     t.float   "total"
   end
 
-  add_index "orders", ["product_id"], name: "index_orders_on_product_id"
+  add_index "orders", ["course_id"], name: "index_orders_on_course_id"
   add_index "orders", ["user_id"], name: "index_orders_on_user_id"
 
   create_table "photos", force: :cascade do |t|
