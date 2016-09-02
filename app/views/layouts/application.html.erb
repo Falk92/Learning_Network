@@ -91,7 +91,7 @@
             </ul>
           </div>
 
-          <div class="mdl-mega-footer__drop-down-section">
+<!--           <div class="mdl-mega-footer__drop-down-section">
             <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
             <h1 class="mdl-mega-footer__heading">Details</h1>
             <ul class="mdl-mega-footer__link-list">
@@ -99,7 +99,7 @@
               <li><a href="#">Tools</a></li>
               <li><a href="#">Resources</a></li>
             </ul>
-          </div>
+          </div> -->
 
           <div class="mdl-mega-footer__drop-down-section">
             <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
@@ -107,13 +107,13 @@
             <ul class="mdl-mega-footer__link-list">
               <li><a href="static_pages/how_it_works">How it works</a></li>
               <!-- <li><a href="#">Patterns</a></li> -->
-              <li><a href="#">Usage</a></li>
+              <!-- <li><a href="#">Usage</a></li> -->
               <!-- <li><a href="#">Products</a></li> -->
-              <li><a href="#">Contracts</a></li>
+              <!-- <li><a href="#">Contracts</a></li> -->
             </ul>
           </div>
 
-          <div class="mdl-mega-footer__drop-down-section">
+<!--           <div class="mdl-mega-footer__drop-down-section">
             <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
             <h1 class="mdl-mega-footer__heading">FAQ</h1>
             <ul class="mdl-mega-footer__link-list">
@@ -121,14 +121,14 @@
               <!-- <li><a href="#">Answers</a></li> -->
               <li><a href="static_pages/contact">Contact us</a></li>
             </ul>
-          </div>
+          </div> -->
 
         </div>
 
         <div class="mdl-mega-footer__bottom-section">
           <div class="mdl-logo">©2016 Learning Network</div>
           <ul class="mdl-mega-footer__link-list">
-            <li><a href="#">Help</a></li>
+            <!-- <li><a href="#">Help</a></li> -->
             <li><%= link_to "Privacy & Terms", static_pages_Impressum_path %></li>
           </ul>
         </div>
@@ -150,51 +150,3 @@
 
 </body>
 </html>
-
-
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-  <title>LearningNetwork</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <%= stylesheet_link_tag    'default', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'default', 'data-turbolinks-track' => true %>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<% if notice %>
-    <p id="notice" class="alert alert-info"><%= notice %></p>
-<% end %>
-<% if alert %>
-    <p id="alert" class="alert alert-info"><%= alert %></p>
-<% end %>
-<!--Bootstrap css und js schon integriert-->
-<!--Hier muss eine schöne Nav-Bar her (siehe Readme Vorlage)-->
-  <!-- <nav>
-    <ul>
-      <li>Home</li>
-      <li>Über uns</li>
-      <li>Kontakt</li>
-    </ul>
-    <ul class="nav pull-right">
-      <li>
-      <% if user_signed_in? %>
-        <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
-      <% else %>
-        <%= link_to('Login', new_user_session_path) %>
-      <% end %>
-      </li>
-    </ul>
-  </nav>
-<!--Hier muss ein schöner Footer her mit Link zum Impressum-->
-  <!-- <footer>
-    Impressum
-  </footer>
-  
-
-
-
-</body>
-</html> -->
