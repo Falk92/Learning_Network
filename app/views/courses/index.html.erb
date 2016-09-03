@@ -48,15 +48,14 @@
               <div class="">
                 <%= link_to 'Read More', course, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
       
+                <% if current_user.try(:admin?) %>
                 <button id="creator-menu_<%= index %>" class="mdl-button mdl-js-button mdl-button--icon">
                   <i class="material-icons">more_vert</i>
                 </button>
                 <ul for="creator-menu_<%= index %>" class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--top-right">
-                <li class="mdl-menu__item creator-menu__item"><%= link_to 'See more to add course to your courses', course %></li>
-                <% if current_user.try(:admin?) %>
-                    <li class="mdl-menu__item creator-menu__item"><%= link_to 'Edit', edit_course_path(course) %></li>
-                    <li class="mdl-menu__item creator-menu__item creator-menu--warning"><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure you want to delete this course?'} %></li>
-                  </ul>
+                  <li class="mdl-menu__item creator-menu__item"><%= link_to 'Edit', edit_course_path(course) %></li>
+                  <li class="mdl-menu__item creator-menu__item creator-menu--warning"><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure you want to delete this course?'} %></li>
+                </ul>
                 <% end %>
               </div>
             </div>
