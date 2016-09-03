@@ -1,23 +1,25 @@
-<h1>Contact Us</h1>
+<header class="intro">
+  <h1>Contact Us</h1>
+</header>
 
 <%= flash[:notice] %>
 
 <%= form_tag("/static_pages/thank_you") do %>
-<div class="row">
-  <div class="col-md-4">
-    <div class="form-group">
-      <%= label_tag :name %>
-      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
-    </div>      
-    <div class="form-group">
-      <%= label_tag :email, "Email Address" %>
-      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
-    </div>
-    <div class="form-group">
-      <%= label_tag :message %>
-      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
-    </div>      
+<div class="contact--frame">
+  <div class="mdl-textfield mdl-js-textfield contact--field">
+    <%= text_field_tag :name, nil, class: "form-control mdl-textfield__input", id:"contact-name" %>
+    <%= label_tag :name, nil, class: "mdl-textfield__label", for:"contact-name" %>
   </div>
+
+  <div class="mdl-textfield mdl-js-textfield contact--field">
+    <%= text_field_tag :email, nil, class: "mdl-textfield__input", :id => "email_login" %>
+    <%= label_tag :email, nil, class: "mdl-textfield__label", for:"email_login" %>
+  </div>
+  
+  <div class="mdl-textfield mdl-js-textfield contact--field">
+    <%= label_tag :message, nil, :class => "mdl-textfield__label", :for => "contact_message" %>
+    <%= text_area_tag :message, nil, :class => "mdl-textfield__input form-control", :id => "contact_message", :rows => "10" %>
+  </div>
+  <%= submit_tag "Send", :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light form-send__button" %>   
 </div>
-<%= submit_tag "Send" %>   
 <% end %>

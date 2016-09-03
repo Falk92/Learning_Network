@@ -659,6 +659,48 @@ header.intro {
   color: $accent-color__warning;
 }
 
+.login--background {
+  position: relative;
+  height: 750px;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  &:before {
+    content:'';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background: image-url("head.jpeg") no-repeat center;
+    background-size: cover;
+    z-index: -1;
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    -o-filter: grayscale(1);
+    -ms-filter: grayscale(1);
+    filter: grayscale(1);
+  }
+}
+
+.login-card__custom {
+  padding: 25px;
+}
+
+.mdl-card__login {
+  padding: 0;
+}
+
+.login--supporting-text {
+  padding: 0;
+  margin: 10px 0 30px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 300;
+}
+
 .devise--frame {
   width: 90%;
   margin: 100px auto; 
@@ -672,8 +714,9 @@ header.intro {
     margin: 0 auto;
     width: 150px;
   }
-  .login__button {
-    margin: 50px 0; 
+  input.mdl-button.mdl-button--raised.login__button {
+    margin: 50px 0 0;
+    background-color: $background-color__main; 
   }
   .sign-up_button,
   .sign-up_button:hover {
@@ -700,6 +743,12 @@ header.intro {
       color: #666;
     }
   }
+  .mdl-checkbox.is-checked .mdl-checkbox__tick-outline {
+    background-color: $background-color__main;
+  }
+  .mdl-checkbox.is-checked .mdl-checkbox__box-outline {
+    border-color: $background-color__main;
+  }
 }
 
 .edit-button--frame {
@@ -714,4 +763,20 @@ header.intro {
   .sign-up_button:hover {
     background: rgba(0,0,0, 0.1)
   }
+}
+
+.contact--frame {
+  width: 90%;
+  max-width: 600px;
+  margin: 120px auto;
+  text-align: center;
+}
+
+.contact--field {
+  display: block;
+  width: 100%;
+}
+
+.form-send__button {
+  margin-top: 30px;
 }
