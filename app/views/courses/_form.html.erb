@@ -52,13 +52,13 @@
         </div>
         <div class="event-time">
           <div class="event-time--start event-time--value">
-            <label for="time-start">from</label>
-            <input type="text" placeholder="00:00" id="time-start">
+            <%= f.label :fromtime, "from" %>
+            <%= f.text_field :fromtime, :class => "", :id => "time-start", :placeholder => "00:00" %>
           </div>
           <div class="event-time--end event-time--value">
             <p>
-              <label for="time-end">to</label>
-              <input type="text" placeholder="00:00" id="time-end">
+              <%= f.label :totime, "to" %>
+              <%= f.text_field :totime, :class => "", :id => "time-end", :placeholder => "00:00" %>
             </p>
           </div>
         </div>

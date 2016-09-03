@@ -644,11 +644,18 @@ header.intro {
   display: flex;
 }
 
-.creator-menu__item a {
+.creator-menu__item {
+  font-size: 16px;
+  color: #757575;
+  font-weight: 500;
+}
+
+.creator-menu__item a,
+.creator-menu--frame a {
   text-decoration: none;
 }
 
-.creator-menu--warning a {
+.creator-menu--warning li {
   color: $accent-color__warning;
 }
 
