@@ -374,7 +374,8 @@ a.mdl-button.mdl-button--raised.button-warning {
 
 // --- Head section
 header.intro {
-  height: 200px;
+  min-height: 200px;
+  padding: 50px 0;
   text-align: center;
   background-color: $background-color__light;
   display: flex;
@@ -591,6 +592,15 @@ header.intro {
     flex-direction: column;
     width: 50%;
   }
+}
+.index-search {
+  margin: 50px 0 0;
+}
+
+.search--button {
+  margin-left: 20px;
+  background-color: $accent-color;
+  color: white;
 }
 
 .course-listing {

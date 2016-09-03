@@ -7,14 +7,18 @@
       <%= link_to '+ Add Course', new_course_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
     <% end %>
   </div>
+  <div class="index-search">
+    <%= form_tag("/courses", method: "get") do %>
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <%= text_field_tag(:q, nil, :class => "mdl-textfield__input", :id => "search") %>
+        <%= label_tag(:q, "Search...", :for => "search", :class => "mdl-textfield__label" ) %>
+      </div>
+      <%= button_tag nil, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect search--button" do %>
+        <i class="material-icons">search</i>
+      <% end -%>
+    <% end %>
+  </div>
 </header>
-
-<!-- Search Field -->
-<%= form_tag("/courses", method: "get") do %>
-  <%= label_tag(:q, "Search for:") %>
-  <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
-<% end %>
 
 <!-- Index -->
 <section class="course-listing">
