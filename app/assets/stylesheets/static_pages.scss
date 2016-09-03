@@ -823,12 +823,20 @@ header.intro {
     max-width: 1200px;
   }
   .show-cell {
-
+    
+  }
+  .side-card {
+    margin: 16px 0;
+    box-sizing: border-box;
+    &:first-of-type {
+      margin-top: 0;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
   .main-card {
     width: 100%;
-    display: flex;
-    flex-direction: column;
   }
   .title-container {
     width: 65%;
