@@ -780,3 +780,32 @@ header.intro {
 .form-send__button {
   margin-top: 30px;
 }
+
+.send-password--frame {
+  margin: 100px 0;
+  text-align: center;
+  .sign-up__frame {
+    display: inline-block;
+    margin: 0 5px;
+    &:first-of-type {
+      margin-left: 0;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  .sign-up_button,
+  .sign-up_button:hover {
+    color: #666;
+    margin-top: 30px;
+  }
+  .sign-up_button {
+    background: rgba(0,0,0, 0.05);
+  }
+  .sign-up_button:hover {
+    background: rgba(0,0,0, 0.1)
+  }
+  input.mdl-button.mdl-button--raised.login__button {
+    background-color: $background-color__main; 
+  }
+}
