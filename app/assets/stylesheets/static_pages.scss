@@ -872,6 +872,7 @@ header.intro {
   }
   .description {
     padding: 25px;
+    width: 90%;
     h1,
     p {
       font-size: 15px;
@@ -881,5 +882,44 @@ header.intro {
       font-weight: 500;
       margin-bottom: 5px;
     }
+  }
+  .summary-content {
+    padding: 0 25px 25px;
+  }
+  .section-title {
+    color: black;
+    padding-bottom: 3px;
+  }
+  .time-info {
+    font-size: 0.8rem;
+    padding-bottom: 30px;
+    &--end {
+      padding-bottom: 0px;
+    }
+  }
+  .show-buttons {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .sign-up__frame {
+    display: inline-block;
+    margin: 0 5px;
+    &:first-of-type {
+      margin-left: 0;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  .sign-up_button,
+  .sign-up_button:hover {
+    color: #666;
+    margin-top: 30px;
+  }
+  .sign-up_button {
+    background: rgba(0,0,0, 0.05);
+  }
+  .sign-up_button:hover {
+    background: rgba(0,0,0, 0.1)
   }
 }

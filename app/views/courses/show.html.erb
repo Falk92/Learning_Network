@@ -32,49 +32,56 @@
     <div class="show--column mdl-cell mdl-cell--4-col">
       <div class="mdl-card mdl-shadow--2dp main-card side-card">
         <div class="mdl-card__title custom-card__title show--card-title">
-          <div class="title-container">
+          <div>
             <h2 class="mdl-card__title-text custom-card__title-text listing__custom-title show-title">
             Summary
             </h2>
+            <h2 class="mdl-card__supporting-text custom-card__supporting-text show--supporting-text"><%= truncate(@course.description, length: 150) %></h2>
+          </div>
+        </div>
+        <div class="summary-content">
+          <div class="when">
+            <div class="section-title">
+              When?
+            </div>
+            <div class="time-info">
+              <%= @course.time %> | <%= @course.fromtime %> - <%= @course.totime %>
+            </div>
+          </div>
+          <div class="where">
+            <div class="section-title">
+              Where?
+            </div>
+            <div class="time-info time-info--end">
+              <%= @course.place %>
+            </div>
           </div>
         </div>
       </div>
       <div class="mdl-card mdl-shadow--2dp main-card side-card">
-        
+        <div class="mdl-card__title custom-card__title show--card-title">
+          <div>
+            <h2 class="mdl-card__title-text custom-card__title-text listing__custom-title show-title">
+            Material
+            </h2>
+            <h2 class="mdl-card__supporting-text custom-card__supporting-text show--supporting-text">
+              Pretium potenti nibh pellentesque, suspendisse facilisis malesuada posuere mollis suspendisse.
+            </h2>
+          </div>
+        </div>
       </div>
     </div>
-
   </div>
 
-  <p>
-    <strong>Date:</strong>
-    <%= @course.time %>
-  </p>
-
-  <p>
-    <strong>From:</strong>
-    <%= @course.fromtime %>
-  </p>
-
-  <p>
-    <strong>To:</strong>
-    <%= @course.totime %>
-  </p>
-
-  <p>
-    <strong>Place:</strong>
-    <%= @course.place %>
-  </p>
-
-  <p>
-    <strong>Image url:</strong>
-    <%= @course.image_url %>
-  </p>
-
   
-
-  <% if current_user.try(:admin?) %>
-    <%= link_to 'Edit', edit_course_path(@course) %> |
-    <%= link_to 'Back', courses_path %>
-  <% end %>
+  <div class="show-buttons">
+    <% if current_user.try(:admin?) %>
+    <div class="sign-up__frame">
+      <%= link_to 'Edit', edit_course_path(@course), :class => "mdl-button mdl-js-button mdl-js-ripple-effect sign-up_button" %>
+    </div>
+    <div class="sign-up__frame">
+      <%= link_to 'Back', courses_path, :class => "mdl-button mdl-js-button mdl-js-ripple-effect sign-up_button" %>
+    </div>
+    <% end %>
+  </div>
 </div>
