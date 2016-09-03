@@ -673,7 +673,7 @@ header.intro {
     width: 150px;
   }
   .login__button {
-    margin: 50px 0;
+    margin: 50px 0; 
   }
   .sign-up_button,
   .sign-up_button:hover {
@@ -699,5 +699,19 @@ header.intro {
       text-decoration: none;
       color: #666;
     }
+  }
+}
+
+.edit-button--frame {
+  padding: 0px 20px 28px 28px;
+  .sign-up_button,
+  .sign-up_button:hover {
+    color: #666;
+  }
+  .sign-up_button {
+    background: rgba(0,0,0, 0.05);
+  }
+  .sign-up_button:hover {
+    background: rgba(0,0,0, 0.1)
   }
 }
