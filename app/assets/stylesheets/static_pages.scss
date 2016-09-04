@@ -372,6 +372,7 @@ a.mdl-button.mdl-button--raised.button-warning {
   }
   img {
     max-width: 180px;
+    max-height: 120px;
   }
 }
 
@@ -664,9 +665,13 @@ header.intro {
 }
 
 .listing__card-box--date {
-  padding-top: 0px;
-  padding-bottom: 15px;
+  padding-top: 0;
+  padding-bottom: 0;
   font-size: 0.8rem;
+}
+
+.listing__card-box--location {
+  padding-bottom: 16px;
 }
 
 .card-box--description {
