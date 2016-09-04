@@ -30,10 +30,11 @@ This is the official application for the Learning Network, an initiative of the 
 ==To-Do List:
 
 *   Views for ..<br>
-	>	User Management (/views/devise) & Funktionen für User Management
-	>	- User anschauen
-	>	- User editieren
-	>	- Link zu "My courses"
-	>	Notifikationen für z.B. "Sign in successfully." neu platzieren
+	User Management (/views/devise) & Funktionen für User Management
+	- User anschauen
+	- User editieren
+	- Link zu "My courses"
+	Notifikationen für z.B. "Sign in successfully." neu platzieren
+  E-Mail Views (views/user_mailer)
 *   Show Admin who is in which course
 *   Add Image Upload (Half done)
