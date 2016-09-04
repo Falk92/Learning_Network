@@ -16,29 +16,43 @@
 
     <div class="listing__cell mdl-cell mdl-cell--4-col">
       <div class="mdl-card mdl-shadow--2dp listing--course_card">
-          <div class="mdl-card__title custom-card__title">
-            <h2 class="mdl-card__title-text custom-card__title-text listing__custom-title"><%= course.title %></h2>
-          </div>
-            <h2 class="mdl-card__supporting-text custom-card__supporting-text">by <%= course.author %></h2>
-          <div class="listing__card-box listing__card-box--date">
-            <span><%= course.time %></span><span> | </span>
-            <span><%= course.place %></span>
-          </div>
-        <div class="listing--card_picture">
-          <%= course.image_url %>
+        <div class="mdl-card__title custom-card__title">
+          <h2 class="mdl-card__title-text custom-card__title-text listing__custom-title"><%= course.title %></h2>
         </div>
-        <div class="listing__card-box card-box--description">
-          <div class="card-box__description">
-            <h1><%= course.title %></h1>
-            <%= truncate(course.description,  length: 300, omission: '...')  %>
-          </div>
+          <h2 class="mdl-card__supporting-text custom-card__supporting-text">by <%= course.author %></h2>
+        
+        <div class="listing__card-box listing__card-box--date">
+          <span><%= course.time %></span><span> | </span>
+          <span><%= course.fromtime %></span><span> - </span>
+          <span><%= course.totime %></span>
         </div>
-        <div class="listing__card-box card-box--buttons mdl-card__actions">
-          <div class="">
-            <%= link_to 'Read More', course, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
-          </div>
+        <div class="listing__card-box listing__card-box--date listing__card-box--location">
+          <span><%= course.place %></span>
+        </div>
+        
+      <div class="listing--card_picture">
+        <%= course.image_url %>
+      </div>
+    
+
+
+      <div class="listing__card-box card-box--description">
+        <div class="card-box__description">
+          <h1><%= course.title %></h1>
+          <%= truncate(course.description,  length: 300, omission: '...')  %>
         </div>
       </div>
+      <div class="listing__card-box card-box--buttons mdl-card__actions">
+        <div class="">
+          <%= link_to 'Read More', course, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+        </div>
+      </div>
+
+    
+
+
     </div>
+    
+  </div>
   <% end %>
 </ul>
