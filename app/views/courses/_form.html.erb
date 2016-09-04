@@ -116,6 +116,16 @@
         <div class="mdl-card__supporting-text custom-card__supporting-text">
           if there are any additional ressources needed your participants should bring with them just add it here
         </div>
+
+        <div>
+          <div class="text-form text-form__description">
+            <div class="mdl-textfield mdl-js-textfield">
+              <%= f.label :material, :class => "mdl-textfield__label", :for => "course_material" %>
+              <%= f.text_area :material, :class => "mdl-textfield__input", :id => "course_material" %>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div> <!-- grid end -->

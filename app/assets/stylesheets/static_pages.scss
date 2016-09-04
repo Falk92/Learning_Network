@@ -174,6 +174,9 @@ a.mdl-button.mdl-button--raised.button-warning {
       background: none;
     }
   }
+  .mdl-button {
+    color: $accent-color;
+  }
 }
 
 //---
@@ -380,6 +383,7 @@ header.intro {
   background-color: $background-color__light;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   h1 {
     font-weight: 100;
@@ -627,7 +631,7 @@ header.intro {
 
 .course-listing {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 50px auto;
 }
 
 .listing--card_picture {
@@ -936,9 +940,10 @@ header.intro {
     width: 100%;
     height: 300px;
   }
-  .description {
+  .description,
+  .course-material {
     padding: 25px;
-    width: 90%;
+    width: calc(100% - 50px);
     h1,
     p {
       font-size: 15px;
@@ -962,6 +967,9 @@ header.intro {
     &--end {
       padding-bottom: 0px;
     }
+  }
+  .course-material {
+
   }
   .show-buttons {
     text-align: center;
