@@ -28,7 +28,12 @@
               </div>
             </div>
           </div>
-          <h2>Author Name</h2>
+          <div>
+            <div class="mdl-textfield mdl-js-textfield author-field">
+              <%= f.text_field :author, :class => "mdl-textfield__input author-field__input", :id => "author" %>
+              <%= f.label :author, :class => "mdl-textfield__label author-field__label", :for => "author" %>
+            </div>
+          </div>
           <div class="title-section--buttons">
             <%= f.submit "Accept", :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light" %>
             <%= link_to 'Cancel', courses_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-warning" %>

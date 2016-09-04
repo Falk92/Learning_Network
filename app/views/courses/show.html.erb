@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div class="course-show">
-  <header class="intro">
+  <header class="intro intro--card">
     <h1><%= @course.title %></h1>
   </header>
 
@@ -12,7 +12,7 @@
             <h2 class="mdl-card__title-text custom-card__title-text listing__custom-title show-title">
             <%= @course.title %>
             </h2>
-            <h2 class="mdl-card__supporting-text custom-card__supporting-text show--supporting-text">by author</h2>
+            <h2 class="mdl-card__supporting-text custom-card__supporting-text show--supporting-text">by <%= @course.author %></h2>
           </div>
           <div class="add-button">
             <a href="/cart/<%= @course.id %>" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light add-button--style"> Add to my Courses </a>
@@ -29,7 +29,7 @@
         </div>
       </div>
     </div>
-    <div class="show--column mdl-cell mdl-cell--4-col">
+    <div class="show--column mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
       <div class="mdl-card mdl-shadow--2dp main-card side-card">
         <div class="mdl-card__title custom-card__title show--card-title">
           <div>

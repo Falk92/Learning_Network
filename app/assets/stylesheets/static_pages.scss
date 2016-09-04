@@ -384,11 +384,16 @@ header.intro {
   h1 {
     font-weight: 100;
     font-size: 30px;
+    width: 90%;
     color: rgb(68,68,68);
     margin-top: 0;
     @media(min-width: 480px){
       font-size: 42px;
     }
+  }
+  &.intro--card {
+    padding-bottom: 200px;
+    margin-bottom: -180px;
   }
 }
 
@@ -422,7 +427,10 @@ header.intro {
 }
 
 .custom-card-grid {
-  padding: 20px;
+  padding: 5px;
+  @media(min-width: 480px){
+    padding: 20px;
+  }
 }
 
 .card-title {
@@ -448,6 +456,14 @@ header.intro {
     .mdl-textfield__label {
       color: rgba(255, 255, 255, .5);
       font-size: 20px;
+    }
+    .author-field {
+      max-width: 250px;
+      margin: -20px 0 20px;
+    }
+    .author-field__input,
+    .author-field__label {
+      font-size: 12px;
     }
   }
   .upload-field {
@@ -597,10 +613,16 @@ header.intro {
   margin: 50px 0 0;
 }
 
-.search--button {
+.search--button,
+.search--button:hover {
   margin-left: 20px;
   background-color: $accent-color;
   color: white;
+  display: block;
+  margin: 0 auto;
+  @media(min-width: 480px) {
+    display: inline-block;
+  }
 }
 
 .course-listing {
@@ -764,7 +786,10 @@ header.intro {
 }
 
 .edit-button--frame {
-  padding: 0px 20px 28px 28px;
+  padding: 0px 20px 28px 13px;
+  @media(min-width: 480px){
+    padding: 0px 20px 28px 28px;
+  }
   .sign-up_button,
   .sign-up_button:hover {
     color: #666;
@@ -789,8 +814,11 @@ header.intro {
   width: 100%;
 }
 
-.form-send__button {
+.form-send__button,
+.form-send__button:hover {
   margin-top: 30px;
+  background-color: $accent-color;
+  color: white;
 }
 
 .send-password--frame {
@@ -832,17 +860,45 @@ header.intro {
     padding: 0;
     max-width: 1200px;
   }
-  .show-cell {
-    
+  .show--column {
+    display: flex;
+    flex-direction: column;
+    @media(min-width: 480px) {
+      flex-direction: row;
+    }
+    @media(min-width: 840px) {
+      flex-direction: column;
+    }
   }
   .side-card {
-    margin: 16px 0;
+    margin: 8px;
     box-sizing: border-box;
     &:first-of-type {
       margin-top: 0;
+      margin-left: 0;
     }
     &:last-of-type {
-      margin-bottom: 0;
+      margin-left: 0;
+    }
+    @media(min-width: 480px) {
+      &:first-of-type {
+        
+      }
+      &:last-of-type {
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 8px;
+      }
+    }
+    @media(min-width: 840px) {
+      &:first-of-type {
+        margin-top: 0;
+        margin-right: 0;
+      }
+      &:last-of-type {
+        margin-top: 8px;
+        margin-left: 0;
+      }
     }
   }
   .main-card {

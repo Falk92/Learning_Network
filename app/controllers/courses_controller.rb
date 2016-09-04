@@ -24,6 +24,7 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
+    @course.author ||= current_user.email #default value for course author
   end
 
   # GET /courses/1/edit
@@ -70,6 +71,7 @@ class CoursesController < ApplicationController
     end
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_course
@@ -78,7 +80,7 @@ class CoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:title, :time, :place, :description, :image_url, :fromtime, :totime, :material)
+      params.require(:course).permit(:title, :time, :place, :description, :image_url, :fromtime, :totime, :material, :author)
     end
 
 
