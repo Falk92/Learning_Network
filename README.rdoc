@@ -30,16 +30,10 @@ This is the official application for the Learning Network, an initiative of the 
 ==To-Do List:
 
 *   Views for ..<br>
-	*	User Management (/views/devise) & Funktionen für User Management<br>
-		- User anschauen<br>
-		- User editieren<br>
-		- Link zu "My courses"<br>
-	*	Courses Show (/views/courses/show.html.erb)<br>
-	*	Courses New (/views/courses/_form.html.erb) - Bugs fixen<br>
-	*	Contact (/views/static_pages/contact.html.erb)<br>
-	*	Notifikationen für z.B. "Sign in successfully." neu platzieren<br>
-  * Suchfunktion stylen
-  * Entsprechende Felder für die Kurserstellung erstellen
+	>	User Management (/views/devise) & Funktionen für User Management
+	>	- User anschauen
+	>	- User editieren
+	>	- Link zu "My courses"
+	>	Notifikationen für z.B. "Sign in successfully." neu platzieren
 *   Show Admin who is in which course
-*   Test Mailer
 *   Add Image Upload (Half done)
