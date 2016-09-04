@@ -637,6 +637,10 @@ header.intro {
   }
 }
 
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label {
+  color: $accent-color__light;
+}
+
 .course-listing {
   max-width: 1200px;
   margin: 50px auto;
