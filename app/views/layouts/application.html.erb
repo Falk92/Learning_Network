@@ -84,10 +84,10 @@
             <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
             <h1 class="mdl-mega-footer__heading">Features</h1>
             <ul class="mdl-mega-footer__link-list">
-              <li><a href="static_pages/about">About</a></li>
-              <li><a href="static_pages/Impressum">Terms</a></li>
-              <li><a href="#">Partners</a></li>
-              <li><a href="static_pages/updates">Updates</a></li>
+              <li><%= link_to "About", static_pages_about_path %></li>
+              <li><%= link_to "Terms", static_pages_Impressum_path %></li>
+              <li><%= link_to "Partners", static_pages_partners_path %></li>
+              <li><%= link_to "Updates", static_pages_updates_path %></li>
             </ul>
           </div>
 
@@ -105,8 +105,8 @@
             <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
             <h1 class="mdl-mega-footer__heading">FAQ</h1>
             <ul class="mdl-mega-footer__link-list">
-              <li><a href="#">How it works</a></li>
-              <li><a href="static_pages/contact">Contact us</a></li>
+              <li><%= link_to "How it works", static_pages_how_it_works_path %></li>
+              <li><%= link_to "Contact us", static_pages_contact_path %></li>
               <!-- <li><a href="#">Patterns</a></li> -->
               <!-- <li><a href="#">Usage</a></li> -->
               <!-- <li><a href="#">Products</a></li> -->
