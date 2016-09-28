@@ -1,8 +1,8 @@
-<header class="intro">
+<header class="intro txt-ignore">
   <h1>Forgot your password?</h1>
 </header>
 
-<div class="send-password--frame">
+<div class="send-password--frame txt-ignore">
   <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
     <%= devise_error_messages! %>
 

@@ -1,4 +1,4 @@
-<header class="intro">
+<header class="intro txt-ignore">
   <h1>Your Courses</h1>
   <% if @cart.empty? %>
     <p>You don't have any courses selected.</p>
@@ -9,7 +9,7 @@
 
 
 
-<ul>
+<ul class="txt-ignore">
   <% @cart.each do | id, quantity | %>
     <% course = Course.find_by_id(id) %>
 

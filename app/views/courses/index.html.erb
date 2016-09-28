@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<header class="intro">
+<header class="intro txt-ignore">
   <h1>Learing Network <br>Courses</h1>
   <div>
     <% if current_user.try(:admin?) %>
@@ -21,7 +21,7 @@
 </header>
 
 <!-- Index -->
-<section class="course-listing">
+<section class="course-listing txt-ignore">
   <div class="course_listing--frame mdl-grid">
     <% @courses.each.with_index do |course, index| %>
         <div class="listing__cell mdl-cell mdl-cell--4-col">
