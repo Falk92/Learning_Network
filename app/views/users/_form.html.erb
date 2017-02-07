@@ -1,7 +1,7 @@
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div class="txt-ignore" id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2><%= pluralize(@user.errors.count, "error") %> verhindert das Speichern des Benutzers:</h2>
 
       <ul>
       <% @user.errors.full_messages.each do |message| %>
@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field txt-ignore">
-    <%= f.label :first_name %><br>
+    <%= f.label :first_name, 'Vorname' %><br>
     <%= f.text_field :first_name %>
   </div>
   <div class="field txt-ignore">
-    <%= f.label :last_name %><br>
+    <%= f.label :last_name, 'Nachname' %><br>
     <%= f.text_field :last_name %>
   </div>
   <div class="actions txt-ignore">

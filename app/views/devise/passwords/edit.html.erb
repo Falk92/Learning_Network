@@ -7,7 +7,7 @@
   <div class="field txt-ignore">
     <%= f.label :password, "Neues Passwort" %><br />
     <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em><br />
+      <em>(mindestens <%= @minimum_password_length %> Zeichen)</em><br />
     <% end %>
     <%= f.password_field :password, autofocus: true, autocomplete: "off" %>
   </div>

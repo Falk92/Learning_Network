@@ -9,20 +9,20 @@
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <div>Warte auf Bestätigung von: <%= resource.unconfirmed_email %></div>
   <% end %>
 
   <div class="field txt-ignore">
-    <%= f.label :password, "Passwort" %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :password, "Passwort" %> <i>(leer lassen wenn es nicht geändert werden soll)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
     <% if @minimum_password_length %>
       <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
+      <em>Mindestens <%= @minimum_password_length %> Zeichen</em>
     <% end %>
   </div>
 
   <div class="field txt-ignore">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, 'Passwort Bestätigung' %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 

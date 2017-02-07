@@ -4,7 +4,7 @@
   <h1>Learing Network <br>Veranstaltungen</h1>
   <div>
     <% if current_user.try(:admin?) %>
-      <%= link_to '+ Kurs hinzufügen', new_course_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+      <%= link_to '+ Veranstaltung hinzufügen', new_course_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
     <% end %>
   </div>
   <div class="index-search">

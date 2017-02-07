@@ -13,13 +13,13 @@
       </div>
       <div class="mdl-textfield mdl-js-textfield devise__textfield">
         <%= f.password_field :password, :class => "mdl-textfield__input", :id => "password_login",  autocomplete: "off" %>
-        <%= f.label :password, :class => "mdl-textfield__label", :for => "password_login" %>
+        <%= f.label :password, 'Passwort', :class => "mdl-textfield__label", :for => "password_login" %>
       </div>
       <% if devise_mapping.rememberable? -%>
         <div class="devise__remember">
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-rememberme">
             <%= f.check_box :remember_me, :id => "checkbox-rememberme", :class => "mdl-checkbox__input" %>
-            <span class="mdl-checkbox__label">Merken</span>
+            <span class="mdl-checkbox__label">Benutzer merken</span>
           </label>
         </div>
       <% end -%>

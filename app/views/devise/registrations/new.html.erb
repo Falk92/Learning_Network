@@ -13,17 +13,17 @@
 
     <div class="mdl-textfield mdl-js-textfield devise__textfield">
       <%= f.password_field :password, :class => "mdl-textfield__input", :id => "password_login",  autocomplete: "off" %>
-      <%= f.label :password, :class => "mdl-textfield__label", :for => "password_login" %>
+      <%= f.label :password, 'Passwort', :class => "mdl-textfield__label", :for => "password_login" %>
     </div>
 
     <div class="mdl-textfield mdl-js-textfield devise__textfield">
       <%= f.password_field :password_confirmation, :class => "mdl-textfield__input", :id => "password_confirmation",  autocomplete: "off" %>
-      <%= f.label :password_confirmation, :class => "mdl-textfield__label", :for => "password_confirmation" %>
+      <%= f.label :password_confirmation, 'Passwort Bestätigung', :class => "mdl-textfield__label", :for => "password_confirmation" %>
     </div>
     <% if @minimum_password_length %>
       <p>
         Aus Sicherheitsgründen muss das Passwort aus mindestens
-        <%= @minimum_password_length %> Charakteren bestehen.
+        <%= @minimum_password_length %> Zeichen bestehen.
       </p>
     <% end %>
 
