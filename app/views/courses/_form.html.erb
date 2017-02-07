@@ -23,15 +23,15 @@
           <div>
             <div>
               <div class="mdl-textfield mdl-js-textfield">
-                <%= f.text_field :title, :class => "mdl-textfield__input", :id => "sample1" %>
-                <%= f.label :title, "Titel", :class => "mdl-textfield__label", :for => "sample1" %>
+                <%= f.text_field :title, "Titel", :class => "mdl-textfield__input", :id => "sample1" %>
+                <%= f.label :title, :class => "mdl-textfield__label", :for => "sample1" %>
               </div>
             </div>
           </div>
           <div>
             <div class="mdl-textfield mdl-js-textfield author-field">
               <%= f.text_field :author, :class => "mdl-textfield__input author-field__input", :id => "author" %>
-              <%= f.label :author, "Titel", :class => "mdl-textfield__label author-field__label", :for => "author" %>
+              <%= f.label :author, :class => "mdl-textfield__label author-field__label", :for => "author" %>
             </div>
           </div>
           <div class="title-section--buttons">
@@ -50,7 +50,7 @@
           Wähle eine Zeit und ein Datum
         </div>
         <div class="time-label">
-          <%= f.label :time, "Zeit" %>
+          <%= f.label :time %>
         </div>
         <div class="text-form time-form">
           <%= f.text_field :time, :class => "", :id => "time", :placeholder => "Mon, Dec 24" %>
@@ -81,7 +81,7 @@
           <div class="text-form">
             <div class="mdl-textfield mdl-js-textfield">
               <%= f.text_field :place, :class => "mdl-textfield__input", :id => "place" %>
-              <%= f.label :place, "Ort", :class => "mdl-textfield__label", :for => "place" %>
+              <%= f.label :place, :class => "mdl-textfield__label", :for => "place" %>
             </div>
           </div>
         </div>
@@ -102,7 +102,7 @@
           <div class="text-form text-form__description">
             <div class="mdl-textfield mdl-js-textfield">
               <%= f.label :description, :class => "mdl-textfield__label", :for => "course_description" %>
-              <%= f.text_area :description, "Beschreibung", :class => "mdl-textfield__input", :id => "course_description" %>
+              <%= f.text_area :description, :class => "mdl-textfield__input", :id => "course_description" %>
             </div>
           </div>
         </div>
