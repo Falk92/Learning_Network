@@ -66,15 +66,354 @@
     </div>
   </div>
 </section>
-<section class="main-section">
+<section class="main-section partner">
+  <div class="partner__title">
+    <h1>Initiativen</h1>
+  </div>
   <div class="acknowledgement">
-    <div class="acknowledgement-element"> <%= image_tag 'cc.png' %> </div>
-    <div class="acknowledgement-element"> <%= image_tag 'amnesty.gif' %> </div>
-    <div class="acknowledgement-element"> <%= image_tag 'cip.png' %> </div>
-    <div class="acknowledgement-element"> <%= image_tag 'IG.png' %> </div>
-    <div class="acknowledgement-element"> <%= image_tag 'LC.JPG' %> </div>
-  	<div class="acknowledgement-element"> <%= image_tag 'rework.jpg' %> </div>
-  	<div class="acknowledgement-element"> <%= image_tag 'ryl.jpg' %> </div>
-  	<div class="acknowledgement-element"> <%= image_tag 'wr.png' %> </div>
+    <a id="acknowledgement_1" href="#acknowledgement_1_content">
+      <div class="acknowledgement-element"> <%= image_tag 'amnesty.jpg' %>
+      </div>
+    </a>
+    <a id="acknowledgement_2" href="#acknowledgement_2_content">
+      <div class="acknowledgement-element"> <%= image_tag 'cip.png' %>
+      </div>
+    </a>
+    <a id="acknowledgement_3" href="#acknowledgement_3_content">
+      <div class="acknowledgement-element"> <%= image_tag 'hs.jpg' %>
+      </div>
+    </a>
+    <a id="acknowledgement_4" href="#acknowledgement_4_content">
+      <div class="acknowledgement-element"> <%= image_tag 'ig.png' %>
+      </div>
+    </a>
+    <a id="acknowledgement_5" href="#acknowledgement_5_content">
+      <div class="acknowledgement-element"> <%= image_tag 'rework.jpg' %>
+      </div>
+    </a>
+    <a id="acknowledgement_6" href="#acknowledgement_6_content">
+      <div class="acknowledgement-element"> <%= image_tag 'ryl.jpg' %>
+      </div>
+    </a>
+    <a id="acknowledgement_7" href="#acknowledgement_7_content">
+      <div class="acknowledgement-element"> <%= image_tag 'wr.png' %>
+      </div>
+    </a>
+    
+  </div>
+
+  <!--modal 1 -->
+  <div id="acknowledgement_1_content" class="acknowledgement_modal">   
+    <div class="modal-content">
+      <div class="modal-content__main">
+        <div class="close-frame">
+           <div class="close-acknowledgement_1_content modal__close">
+           </div> 
+        </div>
+        <div class="modal__scroll">
+          <div class="modal__scroll__inner">
+            <div class="modal__img">
+              <%= image_tag 'amnesty.jpg' %>
+            </div>
+            <div class="modal__title">
+              <h1>Amnesty International Hochschulgruppe</h1>
+            </div>
+            <div class="modal__desc">
+              <p>
+                Die Amnesty International Hochschulgruppe an der ZU setzt sich unter dem Dach von Amnesty Deutschland für eine Welt ein, in der alle Menschen ihre in der Allgemeinen Erklärung der Menschenrechte garantierten Rechte genießen können. Wir bringen Menschenrechtsthemen in verschiedenen Kontexten der Uni ein, zum Beispiel mittels Fachvorträgen und Podiumsdiskussionen für die universitäre und städtische Öffentlichkeit vor Ort. Zudem engagieren wir uns in der Arbeit mit geflüchteten Menschen mit dem Hauptziel, den Dialog zwischen “alten und neuen” BewohnerInnen Friedrichshafens zu stärken und Geflüchteten Zugang zu universitären Angeboten zu schaffen.
+              </p>
+            </div>
+            <div class="modal__more">
+              <a href="https://www.zu.de/studium-weiterbildung/das-studium/projekte/amnesty.php">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                  zur Initiative
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  $("#acknowledgement_1").animatedModal({
+    'modalTarget': 'acknowledgement_1_content',
+    'color': 'rgba(0,0,0,.75)',
+    'overflow': 'hidden'
+  });
+  </script>
+  <!-- modal END -->
+  <!--modal 2 -->
+  <div id="acknowledgement_2_content" class="acknowledgement_modal">   
+    <div class="modal-content">
+      <div class="modal-content__main">
+        <div class="close-frame">
+           <div class="close-acknowledgement_2_content modal__close">
+           </div> 
+        </div>
+        <div class="modal__scroll">
+          <div class="modal__scroll__inner">
+            <div class="modal__img">
+              <%= image_tag 'cip.png' %>
+            </div>
+            <div class="modal__title">
+              <h1>Club of International Politics – CIP</h1>
+            </div>
+            <div class="modal__desc">
+              <p>
+                Der Club of International Politics e.V. ist ein studentischer, gemeinnütziger Verein der Brücken zwischen den Studierenden der Zeppelin Universität, den Bürgern der Bodenseeregion und der internationalen Politik baut. Wir bieten dabei eine neutrale Plattform zum Austausch über gegenwärtige und zukünftige sowie nationale und internationale Themen. Aus diesem Grund steht im Zentrum unseres Kurses die Vermittlung des deutschen und europäischen Demokratieverständnisses, das Kennenlernen der politischen Situation und der wechselseitige Austausch.
+              </p>
+            </div>
+            <div class="modal__more">
+              <a href="http://www.international-politics.org">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                  zur Initiative
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  $("#acknowledgement_2").animatedModal({
+    'modalTarget': 'acknowledgement_2_content',
+    'color': 'rgba(0,0,0,.75)',
+    'overflow': 'hidden'
+  });
+  </script>
+  <!-- modal END -->
+
+  <!--modal 3 -->
+  <div id="acknowledgement_3_content" class="acknowledgement_modal">   
+    <div class="modal-content">
+      <div class="modal-content__main">
+        <div class="close-frame">
+           <div class="close-acknowledgement_3_content modal__close">
+           </div> 
+        </div>
+        <div class="modal__scroll">
+          <div class="modal__scroll__inner">
+            <div class="modal__img">
+              <%= image_tag 'hs.jpg' %>
+            </div>
+            <div class="modal__title">
+              <h1>Hanns Seidel Hochschulgruppe</h1>
+            </div>
+            <div class="modal__desc">
+              <p>
+                "Im Dienst von Demokratie, Frieden und Entwicklung" - mit diesem Motto überschreibt die Hanns-Seidel-Stiftung ihre Arbeit und ihren Auftrag. Dieses Motto gilt für ihr Engagement im Inland und natürlich auch für das Engagement der Hanns-Seidel-Stipendiaten in ihren Hochschulgruppen.
+                Die Stipendiaten der Hanns-Seidel-Stiftung sind davon überzeugt, dass von einem gegenseitigen Austausch zwischen Geflüchteten, Stipendiaten und Studenten, beide Seiten gleichermaßen lernen und einander bereichern können. Im Vordergrund stehen dabei das Kennenlernen und der Austausch über kulturelle, religiöse und gesellschaftliche Themen.
+              </p>
+            </div>
+            <div class="modal__more">
+              <a href="https://www.zu.de/studium-weiterbildung/das-studium/projekte/hannsseidelstiftung.php">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                  zur Initiative
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  $("#acknowledgement_3").animatedModal({
+    'modalTarget': 'acknowledgement_3_content',
+    'color': 'rgba(0,0,0,.75)',
+    'overflow': 'hidden'
+  });
+  </script>
+  <!-- modal END -->
+
+  <!--modal 4 -->
+  <div id="acknowledgement_4_content" class="acknowledgement_modal">   
+    <div class="modal-content">
+      <div class="modal-content__main">
+        <div class="close-frame">
+           <div class="close-acknowledgement_4_content modal__close">
+           </div> 
+        </div>
+        <div class="modal__scroll">
+          <div class="modal__scroll__inner">
+            <div class="modal__img">
+              <%= image_tag 'ig.png' %>
+            </div>
+            <div class="modal__title">
+              <h1>ImmiGreat</h1>
+            </div>
+            <div class="modal__desc">
+              <p>
+                ImmiGreat ist eine Bürgerinitiative aus Friedrichshafen, welche sich für die Integration von Migranten einsetzt. Die ehrenamtlichen Helferinnen und Helfer geben Deutschunterricht in der städtischen Gemeinschaftsunterkunft. Darüber hinaus baut die Initiative ein lokales Coaching-Netzwerk auf. Mit Hilfe von Gruppencoachings und 1:1-Coachings soll Migranten die Integration erleichtert werden. Ihr Vorhaben möchte die Initiative gerne in Zusammenarbeit mit lokalen Unternehmen umsetzen.
+              </p>
+            </div>
+            <div class="modal__more">
+              <a href="https://www.immigreat.de/">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                  zur Initiative
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  $("#acknowledgement_4").animatedModal({
+    'modalTarget': 'acknowledgement_4_content',
+    'color': 'rgba(0,0,0,.75)',
+    'overflow': 'hidden'
+  });
+  </script>
+  <!-- modal END -->
+
+  <!--modal 5 -->
+  <div id="acknowledgement_5_content" class="acknowledgement_modal">   
+    <div class="modal-content">
+      <div class="modal-content__main">
+        <div class="close-frame">
+           <div class="close-acknowledgement_5_content modal__close">
+           </div> 
+        </div>
+        <div class="modal__scroll">
+          <div class="modal__scroll__inner">
+            <div class="modal__img">
+              <%= image_tag 'rework.jpg' %>
+            </div>
+            <div class="modal__title">
+              <h1>Rework</h1>
+            </div>
+            <div class="modal__desc">
+              <p>
+                Rework, die grüne Hochschulgruppe der ZU, versteht sich als Plattform und Drehscheibe, Anstoßgeber und ausführende Kraft von grünen Gedanken und Projekten. Seit der Gründung im Frühjahr 2010 organisieren wir regelmäßig verschiedene Projekte, Veranstaltungen und Interventionen, die sich mit der Zukunftsfähigkeit unserer Lebensweise und unseres Lebensraumes auseinandersetzen. Denn wir wollen nicht nur nachdenken, umdenken und anders denken, sondern auch anders machen. Rework eben!
+              </p>
+            </div>
+            <div class="modal__more">
+              <a href="http://go-green-fn.de/ ">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                  zur Initiative
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  $("#acknowledgement_5").animatedModal({
+    'modalTarget': 'acknowledgement_5_content',
+    'color': 'rgba(0,0,0,.75)',
+    'overflow': 'hidden'
+  });
+  </script>
+  <!-- modal END -->
+
+  <!--modal 6 -->
+  <div id="acknowledgement_6_content" class="acknowledgement_modal">   
+    <div class="modal-content">
+      <div class="modal-content__main">
+        <div class="close-frame">
+           <div class="close-acknowledgement_6_content modal__close">
+           </div> 
+        </div>
+        <div class="modal__scroll">
+          <div class="modal__scroll__inner">
+            <div class="modal__img">
+              <%= image_tag 'ryl.jpg' %>
+            </div>
+            <div class="modal__title">
+              <h1>RockYourLife! Friedrichshafen</h1>
+            </div>
+            <div class="modal__desc">
+              <p>
+                ROCK YOUR LIFE! Friedrichshafen e.V. qualifiziert Studierende der Zeppelin Universität als Coaches, die Schüler aus sozial, wirtschaftlich oder familiär benachteiligten Verhältnissen auf ihrem Weg in den Beruf oder die weiterführende Schule begleiten. Ziel der zweijährigen Coaching-Beziehungen ist, die Schüler bei der Entfaltung ihres individuellen Potenzials zu unterstützen, sie in ihren Fähigkeiten, Talenten und Visionen zu stärken, sowie eine gemeinsame und gegenseitige Erweiterung der Perspektiven zu ermöglichen.
+              </p>
+            </div>
+            <div class="modal__more">
+              <a href="http://www.rockyourlife.de/standort/friedrichshafen">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                  zur Initiative
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  $("#acknowledgement_6").animatedModal({
+    'modalTarget': 'acknowledgement_6_content',
+    'color': 'rgba(0,0,0,.75)',
+    'overflow': 'hidden'
+  });
+  </script>
+  <!-- modal END -->
+
+  <!--modal 7 -->
+  <div id="acknowledgement_7_content" class="acknowledgement_modal">   
+    <div class="modal-content">
+      <div class="modal-content__main">
+        <div class="close-frame">
+           <div class="close-acknowledgement_7_content modal__close">
+           </div> 
+        </div>
+        <div class="modal__scroll">
+          <div class="modal__scroll__inner">
+            <div class="modal__img">
+              <%= image_tag 'wr.png' %>
+            </div>
+            <div class="modal__title">
+              <h1>welt_raum</h1>
+            </div>
+            <div class="modal__desc">
+              <p>
+                welt_raum e.V. ermöglicht durch wechselseitige Wertschätzung geprägte Räume, in denen sich Menschen begegnen, voneinander lernen und miteinander teilen. Wir generieren Räume, in denen Gemeinsamkeiten ausgemacht werden können. Raum, in dem zusammen das Gemeinsam erlernt werden kann, in dem Freundschaften und Gesprächs- und Handlungskontakte ermöglicht werden, die das Temporäre überdauern. Unsere Angebote richten sich an Menschen aus allen Gruppen unserer Gesellschaft und nie an Einzelne per se. Es geht uns um die Begegnung auf Augenhöhe, die entstehenden Bindungen und Beziehungen sowie dem daraus resultierenden sozialen Mehrwert.
+              </p>
+            </div>
+            <div class="modal__more">
+              <a href="http://welt-raum.org/">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                  zur Initiative
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  $("#acknowledgement_7").animatedModal({
+    'modalTarget': 'acknowledgement_7_content',
+    'color': 'rgba(0,0,0,.75)',
+    'overflow': 'hidden'
+  });
+  </script>
+  <!-- modal END -->
+
+</section>
+
+<section class="main-section partner">
+  <div class="partner__title">
+    <h1>Partner & Förderer</h1>
+  </div>
+  <div>
+    <div class="acknowledgement">
+      <div class="acknowledgement-element"> <%= image_tag 'bmbf.png' %>
+      </div>
+      <div class="acknowledgement-element"> <%= image_tag 'study.jpg' %>
+      </div>
+      <div class="acknowledgement-element"> <%= image_tag 'daad.png' %>
+      </div>
+      <div class="acknowledgement-element"> <%= image_tag 'fn.jpg' %>
+      </div>
+      <div class="acknowledgement-element"> <%= image_tag 'zu.jpg' %>
+      </div>
+    </div>
   </div>
 </section>

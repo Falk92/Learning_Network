@@ -16,4 +16,5 @@
 //= require picker.js
 //= require picker.date.js
 //= require jquery.timepicker.min.js
+//= require animatedModal.min.js
 //= require_tree .

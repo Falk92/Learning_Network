@@ -277,6 +277,9 @@ a.mdl-button.mdl-button--raised.button-warning {
       }
     }
   }
+  .main-section__cell-highlight {
+    background: $background-color__main;
+  }
 }
 
 .main-section__small {
@@ -1012,5 +1015,112 @@ header.intro {
   }
   .sign-up_button:hover {
     background: rgba(0,0,0, 0.1)
+  }
+}
+
+/* Modal */
+.modal__close {
+  width: 50px;
+  height: 50px;
+  background: none;
+  border-radius: 50%;
+  position: absolute;
+  transform: rotate(0deg);
+  transition: transform .6s;
+  cursor: pointer;
+}
+
+.close-frame {
+  margin: 0;
+  position: absolute;
+  top: 0px;
+  left: calc(100% - 50px);
+}
+
+.modal__close:hover {
+  transform: rotate(180deg);
+  transition: transform .6s;
+}
+
+.modal__close:before {
+  content: '';
+  height: 20px;
+  width: 4px;
+  background: $accent-color;
+  position: absolute;
+  left: calc(50% - 2px);
+  top: 50%;
+  transform: translateY(-50%) translateX(calc(-50% + 1px)) rotate(45deg);
+}
+
+.modal__close:after {
+  content: '';
+  height: 20px;
+  width: 4px;
+  background: $accent-color;
+  position: absolute;
+  right: calc(50% - 2px);
+  top: 50%;
+  transform: translateY(-50%) translateX(calc(-50% + 1px)) rotate(-45deg);
+}
+
+.modal-content {
+  width: 100%;
+  height: calc(100% - 100px);
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  @media(min-width: 992px){
+    justify-content: center;
+    padding-top: 0;
+  }
+}
+
+.modal-content__main {
+  background: white;
+  width: 80%;
+  padding: 30px;
+  position: relative;
+}
+
+.modal__img {
+  margin-bottom: 20px;
+}
+
+.modal__img img {
+  height: 90px;
+  width: auto;
+}
+
+.modal__title {
+  margin-bottom: 15px;
+}
+
+.modal__title h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.modal__more {
+
+}
+
+/* Modal End */
+
+.partner {
+  flex-direction: column;
+  min-height: 100px;
+  margin-bottom: 50px;
+  .partner__title {
+    width: 100%;
+    background: $background-color__light;
+    margin-bottom: 50px;
+  }
+  h1 {
+    padding: 30px;
+    text-align: center;
+    margin: 0;
   }
 }
