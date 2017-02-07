@@ -11,7 +11,7 @@
     <%= form_tag("/courses", method: "get") do %>
       <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
         <%= text_field_tag(:q, nil, :class => "mdl-textfield__input", :id => "search") %>
-        <%= label_tag(:q, "Search...", :for => "search", :class => "mdl-textfield__label" ) %>
+        <%= label_tag(:q, "Suche...", :for => "search", :class => "mdl-textfield__label" ) %>
       </div>
       <%= button_tag nil, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect search--button" do %>
         <i class="material-icons">search</i>
