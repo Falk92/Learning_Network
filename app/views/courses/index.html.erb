@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <header class="intro txt-ignore">
-  <h1>Learing Network <br>Courses</h1>
+  <h1>Learing Network <br>Veranstaltungen</h1>
   <div>
     <% if current_user.try(:admin?) %>
-      <%= link_to '+ Add Course', new_course_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+      <%= link_to '+ Kurs hinzufügen', new_course_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
     <% end %>
   </div>
   <div class="index-search">
@@ -54,7 +54,7 @@
             </div>
             <div class="listing__card-box card-box--buttons mdl-card__actions">
               <div class="">
-                <%= link_to 'Read More', course, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+                <%= link_to 'Mehr', course, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
       
                 <% if current_user.try(:admin?) %>
                 <button id="creator-menu_<%= index %>" class="mdl-button mdl-js-button mdl-button--icon">
@@ -62,10 +62,10 @@
                 </button>
                 <ul for="creator-menu_<%= index %>" class="mdl-menu mdl-js-menu mdl-js-ripple-effect mdl-menu--top-right creator-menu--frame">
                  <%= link_to edit_course_path(course) do %>
-                  <li class="mdl-menu__item creator-menu__item">Edit</li>
+                  <li class="mdl-menu__item creator-menu__item">Bearbeiten</li>
                  <% end -%>
                  <%= link_to course, method: :delete, data: { confirm: 'Are you sure you want to delete this course?'}, :class => "creator-menu--warning" do %>
-                  <li class="mdl-menu__item creator-menu__item">Delete</li>
+                  <li class="mdl-menu__item creator-menu__item">Löschen</li>
                  <% end -%> 
                 </ul>
                 <% end %>

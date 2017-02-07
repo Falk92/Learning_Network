@@ -4,13 +4,13 @@ class UserMailer < ApplicationMailer
   def contact_form(email, name, message)
   @message = message
     mail(:from => email,
-        :to => 'lene-verteiler@zeppelin-university.net',
-        :subject => "A new contact form message from #{name}")
+        :to => 'lene@zeppelin-university.net',
+        :subject => "Neue Kontaktanfrage von #{name}")
   end
 
   def welcome(user)
   @appname = "ZU | LearningNetwork"
   mail( :to => user.email,
-        :subject => "Welcome to the #{@appname}!")
+        :subject => "Willkommen zum #{@appname}!")
   end
 end

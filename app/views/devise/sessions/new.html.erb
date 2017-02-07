@@ -3,7 +3,7 @@
     <div class="mdl-card__title mdl-card__login">
       <h2 class="mdl-card__title-text custom-card__title-text listing__custom-title">Login</h2>
     </div>
-    <h2 class="mdl-card__supporting-text login--supporting-text">Welcome to the Zeppelin University LearningNetwork. To see all courses please login or sign up.
+    <h2 class="mdl-card__supporting-text login--supporting-text">Willkommen zum LearningNetwork. Um alle Veranstaltungen zu sehen melde dich bitte an.
     </h2>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       
@@ -19,11 +19,11 @@
         <div class="devise__remember">
           <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-rememberme">
             <%= f.check_box :remember_me, :id => "checkbox-rememberme", :class => "mdl-checkbox__input" %>
-            <span class="mdl-checkbox__label">Remember me</span>
+            <span class="mdl-checkbox__label">Merken</span>
           </label>
         </div>
       <% end -%>
-        <%= f.submit "Log in", :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light login__button" %>
+        <%= f.submit "Einloggen", :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light login__button" %>
     <% end %>
 
     <%= render "devise/shared/links" %>

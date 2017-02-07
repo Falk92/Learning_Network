@@ -1,9 +1,9 @@
 <header class="intro txt-ignore">
-  <h1>Your Courses</h1>
+  <h1>Deine Veranstaltungen</h1>
   <% if @cart.empty? %>
-    <p>You don't have any courses selected.</p>
+    <p>Du hast keine Veranstaltungen.</p>
   <% else %>
-    <%= link_to 'Empty Your Courses', cart_clear_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-warning" %>
+    <%= link_to 'Veranstaltungen löschen', cart_clear_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-warning" %>
   <% end %>
 </header>
 
@@ -44,7 +44,7 @@
       </div>
       <div class="listing__card-box card-box--buttons mdl-card__actions">
         <div class="">
-          <%= link_to 'Read More', course, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
+          <%= link_to 'Mehr', course, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
         </div>
       </div>
 

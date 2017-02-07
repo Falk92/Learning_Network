@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LearningNetwork</title>
+  <title>ZU Learning Network | LeNe</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -25,15 +25,15 @@
   <header class="mdl-layout__header mdl-color--white txt-ignore">
     <div class="mdl-layout__header-row">
       <!-- Title -->
-      <span><%= link_to "Learning Network", root_path, :class => "mdl-layout-title" %></span>
+      <span><%= link_to "ZU Learning Network | LeNe", root_path, :class => "mdl-layout-title" %></span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <%= link_to "Contact", static_pages_contact_path, :class => "mdl-navigation__link"  %>
+        <%= link_to "Kontakt", static_pages_contact_path, :class => "mdl-navigation__link"  %>
         <!-- <a class="mdl-navigation__link" href="">Events</a> -->
-        <%= link_to "Courses", courses_path, :class => "mdl-navigation__link"  %>
-        <%= link_to "About", static_pages_about_path, :class => "mdl-navigation__link"  %>
+        <%= link_to "Kurse", courses_path, :class => "mdl-navigation__link"  %>
+        <%= link_to "Über uns", static_pages_about_path, :class => "mdl-navigation__link"  %>
       </nav>
       <nav class="mdl-navigation">
         <% if user_signed_in? %>
@@ -45,13 +45,13 @@
     </div>
   </header>
   <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title"><%= link_to "Learning Network | ZU", root_path, :class => "mdl-layout-title drawer-title" %></span>
+    <span class="mdl-layout-title"><%= link_to "Navigation", root_path, :class => "mdl-layout-title drawer-title" %></span>
     <nav class="mdl-navigation">
-      <%= link_to "Contact", static_pages_contact_path, :class => "mdl-navigation__link"  %>
+      <%= link_to "Kontakt", static_pages_contact_path, :class => "mdl-navigation__link"  %>
         <!-- <a class="mdl-navigation__link" href="">Events</a> -->
-      <%= link_to "Courses", courses_path, :class => "mdl-navigation__link"  %>
-      <%= link_to "About", static_pages_about_path, :class => "mdl-navigation__link"  %>
-      <%= link_to "Privacy & Terms", static_pages_Impressum_path, :class => "mdl-navigation__link" %>
+      <%= link_to "Veranstaltungen", courses_path, :class => "mdl-navigation__link"  %>
+      <%= link_to "Über uns", static_pages_about_path, :class => "mdl-navigation__link"  %>
+      <%= link_to "Datenschutzrichtlinie", static_pages_Impressum_path, :class => "mdl-navigation__link" %>
     </nav>
   </div>
   <main class="mdl-layout__content">
@@ -91,9 +91,9 @@
             <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
             <h1 class="mdl-mega-footer__heading">Features</h1>
             <ul class="mdl-mega-footer__link-list">
-              <li><%= link_to "About", static_pages_about_path %></li>
-              <li><%= link_to "Terms", static_pages_Impressum_path %></li>
-              <li><%= link_to "Partners", static_pages_partners_path %></li>
+              <li><%= link_to "Kontakt", static_pages_contact_path %></li>
+              <li><%= link_to "Über uns", static_pages_about_path %></li>
+              <li><%= link_to "Impressum", static_pages_Impressum_path %></li>
               <li><%= link_to "Updates", static_pages_updates_path %></li>
             </ul>
           </div>
@@ -108,19 +108,6 @@
             </ul>
           </div> -->
 
-          <div class="mdl-mega-footer__drop-down-section">
-            <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
-            <h1 class="mdl-mega-footer__heading">FAQ</h1>
-            <ul class="mdl-mega-footer__link-list">
-              <li><%= link_to "How it works", static_pages_how_it_works_path %></li>
-              <li><%= link_to "Contact us", static_pages_contact_path %></li>
-              <!-- <li><a href="#">Patterns</a></li> -->
-              <!-- <li><a href="#">Usage</a></li> -->
-              <!-- <li><a href="#">Products</a></li> -->
-              <!-- <li><a href="#">Contracts</a></li> -->
-            </ul>
-          </div>
-
           <!-- <div class="mdl-mega-footer__drop-down-section">
             <input class="mdl-mega-footer__heading-checkbox" type="checkbox" checked>
             <h1 class="mdl-mega-footer__heading">FAQ</h1>
@@ -134,10 +121,10 @@
         </div>
 
         <div class="mdl-mega-footer__bottom-section">
-          <div class="mdl-logo">©2016 Learning Network</div>
+          <div class="mdl-logo">©2016 ZU Learning Network | LeNe</div>
           <ul class="mdl-mega-footer__link-list">
             <!-- <li><a href="#">Help</a></li> -->
-            <li><%= link_to "Privacy & Terms", static_pages_Impressum_path %></li>
+            <li><%= link_to "Datenschutzrichtlinie", static_pages_Impressum_path %></li>
           </ul>
         </div>
 
