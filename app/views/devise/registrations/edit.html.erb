@@ -1,4 +1,4 @@
-<h2 class="txt-ignore">Edit <%= resource_name.to_s.humanize %></h2>
+<h2 class="txt-ignore">Bearbeiten <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
@@ -13,7 +13,7 @@
   <% end %>
 
   <div class="field txt-ignore">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+    <%= f.label :password, "Passwort" %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off" %>
     <% if @minimum_password_length %>
       <br />
@@ -27,17 +27,17 @@
   </div>
 
   <div class="field txt-ignore">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.label :current_password, "Aktuelles Passwort" %> <i>(wir brauchen dein aktuelles Passwort um deine Änderungen zu bestätigen)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
   <div class="actions txt-ignore">
-    <%= f.submit "Update" %>
+    <%= f.submit "Bestätigen" %>
   </div>
 <% end %>
 
-<h3 class="txt-ignore">Cancel my account</h3>
+<h3 class="txt-ignore">Benutzer löschen</h3>
 
-<p class="txt-ignore">Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<p class="txt-ignore">Unglücklich? <%= button_to "Benutzer löschen", registration_path(resource_name), data: { confirm: "Bist du sicher?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+<%= link_to "Zurück", :back %>
