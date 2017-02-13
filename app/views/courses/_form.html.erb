@@ -15,9 +15,13 @@
     <div class="mdl-cell mdl-cell--12-col">
       <div class="demo-card-wide mdl-card mdl-shadow--2dp card-title">
         <div class="upload-field">
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light" disabled>
+          <!--<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light" enable>
             Bild hochladen
-          </button>
+          </button>-->
+          <div class="mdl-textfield mdl-js-textfield">
+            <%= f.text_field :imageurl, :class => "mdl-textfield__input", :id => "imageurl_1" %>
+            <%= f.label :imageurl, 'Link zu dem Titelbild', :class => "mdl-textfield__label", :for => "imageurl_1" %>
+          </div>
         </div>
         <div class="card-title-section">
           <div>
