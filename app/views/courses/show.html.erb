@@ -20,13 +20,12 @@
             <a href="/cart/<%= @course.id %>" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light add-button--style"> Zu meinen Kursen hinzufügen </a>
           </div>
         </div>
-        <div class="header-picture">
-          <%= image_tag 'immigreat_1.JPG' %>
-          <%= image_tag(@course.imageurl) %>
+        <div class="header-picture" style="background-image: url(<%= asset_path 'immigreat_1.JPG' %>); height: 400px; width: 100%;">
+          <%= image_tag(@course.imageurl, height: "400px", width: "100%") %>
         </div>
-        <div class="description" style="background: rgba(189,189,189,0.5);">
-          <h1 style="color: white;">Beschreibung</h1>
-          <p style="color: white;">
+        <div class="description">
+          <h1>Beschreibung</h1>
+          <p>
             <%= simple_format @course.description %>
           </p>
         </div>
