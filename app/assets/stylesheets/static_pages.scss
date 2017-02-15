@@ -31,7 +31,8 @@ h2 {
 }
 
 button.mdl-button.mdl-button--raised.button-light,
-input.mdl-button.mdl-button--raised.button-light {
+input.mdl-button.mdl-button--raised.button-light,
+label.mdl-button.mdl-button--raised.button-light {
   background-color: $accent-color__light;
 }
 
@@ -495,10 +496,16 @@ header.intro {
     align-items: center;
     justify-content: center;
     height: 300px;
+    width: 100%;
   }
-  .mdl-textfield.upload-link {
-    width: 80%;
-    max-width: 400px;
+  .custom_file_upload input[type="file"] {
+    display: none;
+  }
+  .ball-pulse>div {
+    background-color: black;
+  }
+  #imageurl_1 {
+    display: none;
   }
 }
 
@@ -666,6 +673,11 @@ header.intro {
   background-color: rgb(189,189,189);
   width: 100%;
   height: 175px;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .listing--course_card {
@@ -972,6 +984,11 @@ header.intro {
     background-color: rgb(189,189,189);
     width: 100%;
     height: 300px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
   }
   .description,
   .course-material {
