@@ -141,7 +141,7 @@ a.mdl-button.mdl-button--raised.button-warning {
   }
 }
 
-.mdl-mega-footer--link-list a, 
+.mdl-mega-footer--link-list a,
 .mdl-mega-footer__link-list a {
   font-size: 14px;
   &:hover {
@@ -496,6 +496,10 @@ header.intro {
     justify-content: center;
     height: 300px;
   }
+  .mdl-textfield.upload-link {
+    width: 80%;
+    max-width: 400px;
+  }
 }
 
 .card-title-section h2 {
@@ -769,7 +773,7 @@ header.intro {
 
 .devise--frame {
   width: 90%;
-  margin: 100px auto; 
+  margin: 100px auto;
   max-width: 400px;
   text-align: center;
   .devise__textfield {
@@ -782,7 +786,7 @@ header.intro {
   }
   input.mdl-button.mdl-button--raised.login__button {
     margin: 50px 0 0;
-    background-color: $background-color__main; 
+    background-color: $background-color__main;
   }
   .sign-up_button,
   .sign-up_button:hover {
@@ -878,7 +882,7 @@ header.intro {
     background: rgba(0,0,0, 0.1)
   }
   input.mdl-button.mdl-button--raised.login__button {
-    background-color: $background-color__main; 
+    background-color: $background-color__main;
   }
 }
 
@@ -915,7 +919,7 @@ header.intro {
     }
     @media(min-width: 480px) {
       &:first-of-type {
-        
+
       }
       &:last-of-type {
         margin-top: 0;

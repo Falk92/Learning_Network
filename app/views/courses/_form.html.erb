@@ -18,7 +18,7 @@
           <!--<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light" enable>
             Bild hochladen
           </button>-->
-          <div class="mdl-textfield mdl-js-textfield">
+          <div class="mdl-textfield mdl-js-textfield upload-link">
             <%= f.text_field :imageurl, :class => "mdl-textfield__input", :id => "imageurl_1" %>
             <%= f.label :imageurl, 'Link zu dem Titelbild', :class => "mdl-textfield__label", :for => "imageurl_1" %>
           </div>
@@ -39,7 +39,7 @@
             </div>
           </div>
           <div class="title-section--buttons">
-            <%= f.submit "Erstellen", :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light" %>
+            <%= f.submit "Speicher", :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light" %>
             <%= link_to 'Abbrechen', courses_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-warning" %>
           </div>
         </div>
@@ -173,7 +173,7 @@
     }
   });
 
-  
+
   $('#time-start').timepicker({
     'appendTo': '.page-content',
     'forceRoundTime': true,
@@ -209,7 +209,7 @@
       }
       var h = start_m > 52 ? (start_h === 23 ? 0 : ++start_h) : start_h;
       var h = h.toString();
-      var start_time = h.concat(':',m); 
+      var start_time = h.concat(':',m);
       $('#time-end').timepicker('option', { 'minTime': start_time, 'durationTime': start });
     }
   });
