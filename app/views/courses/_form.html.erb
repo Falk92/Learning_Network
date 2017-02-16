@@ -37,6 +37,13 @@
               <%= f.text_field :author, :class => "mdl-textfield__input author-field__input", :id => "author" %>
               <%= f.label :author, 'Autor', :class => "mdl-textfield__label author-field__label", :for => "author" %>
             </div>
+
+            <br>
+            <div class="mdl-textfield mdl-js-textfield author-field">
+              <%= f.label :picture %>
+              <%= f.file_field :picture %>
+            </div>
+
           </div>
           <div class="title-section--buttons">
             <%= f.submit "Erstellen", :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light" %>
