@@ -14,7 +14,7 @@
   <div class="mdl-grid custom-card-grid edit-grid txt-ignore">
     <div class="mdl-cell mdl-cell--12-col">
       <div class="demo-card-wide mdl-card mdl-shadow--2dp card-title">
-        <div class="upload-field">
+        <div class="upload-field" style="background: url(<%= @course.imageurl %>) no-repeat center; background-size: cover">
           <div class="custom_file_upload">
             <label class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect button-light" id="image_upload_label" for="image_upload"><span id="btn-message">Bild hinzufügen</span><span class="ball-pulse" style="vertical-align: sub; display: none"><div></div><div></div><div></div></span></label>
             <input id="image_upload" type="file" accept="image/*"/>
