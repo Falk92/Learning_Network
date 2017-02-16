@@ -36,9 +36,9 @@
               data: {
               'image': image_url,
               'type': 'base64'
-              },
-              success: fdone,//calling function which displays url
-              error: function(){alert("failed")},
+            },
+              success: fdone,
+              error: ffailed,
               beforeSend: function (xhr) {
                   xhr.setRequestHeader("Authorization", "Client-ID " + clientId);
               }
