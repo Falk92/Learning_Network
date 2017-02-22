@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy,:add_courses]
   before_filter :authenticate_user!
   load_and_authorize_resource
   # GET /users
@@ -58,6 +58,22 @@ class UsersController < ApplicationController
     @user.destroy
     respond_to do |format|
       format.html { redirect_to users_url, notice: 'Benutzer wurde erfolgreich gelöscht.' }
+      format.json { head :no_content }
+    end
+  end
+
+  def add_courses
+    if params["courses"]
+      @user.courses.destroy_all
+      params["courses"].each do |course|
+        course = Course.find(course)
+        if course
+          @user.courses << course
+        end 
+      end
+    end
+    respond_to do |format|
+      format.html { redirect_to user_path(@user) }
       format.json { head :no_content }
     end
   end

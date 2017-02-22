@@ -1,3 +1,24 @@
+<style type="text/css">
+    
+.custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+}
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+}
+.actions{
+  text-align: center;
+}
+a:hover{
+  text-decoration: none;
+}
+</style>
+
 <p class="txt-ignore" id="notice"><%= notice %></p>
 
 <p class="txt-ignore">
@@ -9,6 +30,49 @@
   <strong>Nachname:</strong>
   <%= @user.last_name %>
 </p>
+<hr>
+<h4> Courses </h4>
+<%= form_tag(add_courses_user_path) do %>
+		<label>&nbsp;</label>
+		
+		<% courses = Course.all.map{ |course| [course.title,course.id]} %>
+		<%= select_tag 'courses', options_for_select(courses,@user.courses.pluck(:id)), {:prompt => "Select Courses",:class=>"form-control CateSelect",:multiple => true} %>
+		<%= submit_tag "Add Courses", class: "edit_button" %>
+<% end %>
+
+<div class="container" style="margin-top:30px;">
+
+    <div class="row col-md-12 custyle">
+      <div class="table-responsive">
+        <table class="table table-striped custab">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Time</th>
+                <th>Place</th>
+                <th>Author</th>
+                <th>From</th>
+                <th>To</th>
+              </tr>
+            </thead>
+            <tdody>
+              <% @user.courses.each do |course| %>
+                <tr>
+                  <td><%= course.title %></td>
+                  <td><%= course.time %></td>
+                  <td><%= course.place %></td>
+                  <td><%= course.author %></td>
+                  <td><%= course.fromtime %></td>
+                  <td><%= course.totime %></td>
+                </tr>
+              <% end %>
+            </tbody>
+        </table>
+      </div>
+    </div>
+</div>
+
+
 
 <%= link_to 'Bearbeiten', edit_user_path(@user) %> |
 <%= link_to 'Zurück', users_path %>

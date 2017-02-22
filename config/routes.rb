@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { :registrations => "user_registrations" }
-  resources :users
+  resources :users do
+    member do
+      post 'add_courses'
+    end
+  end
   post 'static_pages/thank_you'
 
   get '/my_courses' => 'cart#index'
