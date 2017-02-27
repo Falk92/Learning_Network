@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <header class="intro txt-ignore">
-  <h1>Learing Network <br>Veranstaltungen</h1>
+  <h1>Learning Network <br>Veranstaltungen</h1>
   <div>
     <% if current_user.try(:admin?) %>
       <%= link_to '+ Veranstaltung hinzufügen', new_course_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" %>
