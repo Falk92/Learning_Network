@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
+  before_filter do 
+    redirect_to main_app.root_url unless current_user && current_user.admin?
+  end
+
   load_and_authorize_resource
   # GET /users
   # GET /users.json
